@@ -154,18 +154,52 @@ function initMobileMenu() {
   const toggleBtn = document.getElementById("mobile-menu-toggle");
   const drawer = document.getElementById("mobile-drawer");
   const closeBtn = document.getElementById("close-mobile-drawer");
+  const backdrop = drawer ? drawer.querySelector(".drawer-backdrop") : null;
 
-  if (!toggleBtn || !drawer) return;
+  if (!drawer) return;
 
-  toggleBtn.addEventListener("click", () => {
-    drawer.classList.remove("-translate-x-full");
+  function openDrawer() {
+    drawer.classList.add("open");
     document.body.style.overflow = "hidden";
-  });
+  }
 
   function closeDrawer() {
-    drawer.classList.add("-translate-x-full");
+    drawer.classList.remove("open");
     document.body.style.overflow = "";
   }
 
+  if (toggleBtn) toggleBtn.addEventListener("click", openDrawer);
   if (closeBtn) closeBtn.addEventListener("click", closeDrawer);
+  if (backdrop) backdrop.addEventListener("click", closeDrawer);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && drawer.classList.contains("open")) {
+      closeDrawer();
+    }
+  });
+
+  window.openMobileDrawer = openDrawer;
+  window.closeMobileDrawer = closeDrawer;
 }
+
+// 5. ĐIỀU KHIỂN VIDEO SPOTLIGHT TRÊN TRANG CHỦ
+function initVideoSpotlight() {
+  const mainPlayer = document.getElementById("main-broadcast-player");
+  const mainTitle = document.getElementById("main-video-title");
+  const mainSummary = document.getElementById("main-video-summary");
+  const mainBadge = document.getElementById("main-video-badge");
+
+  window.changeBroadcastVideo = function (ytId, title, summary, badge) {
+    if (mainPlayer) {
+      mainPlayer.src = `https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0`;
+    }
+    if (mainTitle) mainTitle.textContent = title;
+    if (mainSummary) mainSummary.textContent = summary;
+    if (mainBadge && badge) mainBadge.textContent = badge;
+  };
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initVideoSpotlight();
+});
+

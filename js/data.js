@@ -79,7 +79,7 @@ const TRUYEN_HINH_CONG_THUONG_DATA = {
       excerpt: "Phát huy sáng kiến, cải tiến kỹ thuật, đẩy mạnh chuyển đổi số gắn với xây dựng văn hóa doanh nghiệp là chìa khóa quyết định an toàn lưới điện miền Bắc.",
       timeAgo: "45 phút trước",
       author: "Văn phòng Điện lực",
-      image: "http://img.youtube.com/vi/lGC9zZ4lL2A/0.jpg",
+      image: "assets/images/featured-01.jpg",
       youtubeUrl: "https://www.youtube.com/watch?v=lGC9zZ4lL2A"
     },
     {
@@ -91,7 +91,7 @@ const TRUYEN_HINH_CONG_THUONG_DATA = {
       excerpt: "Ứng dụng công nghệ xử lý tuần hoàn nước khép kín và năng lượng sinh khối biomass giúp các nhà máy giấy giảm 60% lượng phát thải carbon.",
       timeAgo: "1 giờ trước",
       author: "Ban Biên tập Công nghiệp",
-      image: "http://img.youtube.com/vi/9HnIZZ0Kvkw/0.jpg",
+      image: "assets/images/featured-02.jpg",
       youtubeUrl: "https://www.youtube.com/watch?v=9HnIZZ0Kvkw"
     },
     {
@@ -103,7 +103,7 @@ const TRUYEN_HINH_CONG_THUONG_DATA = {
       excerpt: "Các sàn TMĐT phối hợp với Cục Thương mại điện tử và Kinh tế số mở rộng luồng xuất khẩu nông sản OCOP đến thị trường Đông Á và EU.",
       timeAgo: "2 giờ trước",
       author: "Phòng Xúc tiến TMĐT",
-      image: "http://img.youtube.com/vi/V33FiL9oN6A/0.jpg",
+      image: "assets/images/featured-03.jpg",
       youtubeUrl: "https://www.youtube.com/watch?v=V33FiL9oN6A"
     },
     {
@@ -115,7 +115,7 @@ const TRUYEN_HINH_CONG_THUONG_DATA = {
       excerpt: "Thị trường 100 triệu dân tiếp tục là bệ đỡ vững chắc cho hàng Việt khi các chương trình xúc tiến bán hàng nội địa đạt hiệu quả cao.",
       timeAgo: "3 giờ trước",
       author: "Ban Thị trường Trong nước",
-      image: "http://img.youtube.com/vi/DdcigwmpYmQ/0.jpg",
+      image: "assets/images/featured-04.jpg",
       youtubeUrl: "https://www.youtube.com/watch?v=DdcigwmpYmQ"
     }
   ],
@@ -164,7 +164,7 @@ const TRUYEN_HINH_CONG_THUONG_DATA = {
     }
   ],
 
-  // 7. PHÂN KHU MEDIA TRUYỀN HÌNH (Wired Broadcast - Nền Navy Dark #071526)
+  // 7. PHÂN KHU MEDIA TRUYỀN HÌNH (Wired Broadcast Spotlight - Nền Navy Dark #071526)
   broadcastVideos: [
     {
       id: "vid-01",
@@ -173,7 +173,7 @@ const TRUYEN_HINH_CONG_THUONG_DATA = {
       youtubeId: "Q4cg2Xu8AK0",
       youtubeUrl: "https://www.youtube.com/watch?v=Q4cg2Xu8AK0",
       duration: "14:25",
-      thumbnail: "http://img.youtube.com/vi/Q4cg2Xu8AK0/hqdefault.jpg",
+      thumbnail: "https://img.youtube.com/vi/Q4cg2Xu8AK0/hqdefault.jpg",
       badge: "PHÁT SÓNG MỚI NHẤT",
       summary: "Tổng hợp toàn diện hoạt động điều hành của Lãnh đạo Bộ Công Thương, tình hình cung ứng điện sản xuất, giá cả các mặt hàng tiêu dùng thiết yếu và chuyển động của các thị trường xuất khẩu trọng điểm."
     },
@@ -184,7 +184,7 @@ const TRUYEN_HINH_CONG_THUONG_DATA = {
       youtubeId: "hrjl-dhGn5M",
       youtubeUrl: "https://www.youtube.com/watch?v=hrjl-dhGn5M",
       duration: "18:40",
-      thumbnail: "http://img.youtube.com/vi/hrjl-dhGn5M/hqdefault.jpg",
+      thumbnail: "https://img.youtube.com/vi/hrjl-dhGn5M/hqdefault.jpg",
       badge: "CHUYÊN ĐỀ",
       summary: "Sau một năm triển khai, phong trào đổi mới công nghệ và chuyển đổi số đã lan tỏa từ trung ương đến từng phân xưởng nhà máy."
     },
@@ -195,7 +195,7 @@ const TRUYEN_HINH_CONG_THUONG_DATA = {
       youtubeId: "GMcFabBa3Lk",
       youtubeUrl: "https://www.youtube.com/watch?v=GMcFabBa3Lk",
       duration: "09:15",
-      thumbnail: "http://img.youtube.com/vi/GMcFabBa3Lk/hqdefault.jpg",
+      thumbnail: "https://img.youtube.com/vi/GMcFabBa3Lk/hqdefault.jpg",
       badge: "KINH TẾ TUẦN HOÀN",
       summary: "Công nghệ xử lý tro xỉ hiện đại giúp các nhà máy nhiệt điện giải tỏa bãi thải, biến phụ phẩm thành xi măng và bê tông thương phẩm chất lượng cao."
     },
@@ -206,11 +206,115 @@ const TRUYEN_HINH_CONG_THUONG_DATA = {
       youtubeId: "kiYPsWdo6m8",
       youtubeUrl: "https://www.youtube.com/watch?v=kiYPsWdo6m8",
       duration: "12:50",
-      thumbnail: "http://img.youtube.com/vi/kiYPsWdo6m8/hqdefault.jpg",
+      thumbnail: "https://img.youtube.com/vi/kiYPsWdo6m8/hqdefault.jpg",
       badge: "TỌA ĐÀM",
       summary: "Các kỹ sư Việt Nam làm chủ công nghệ chế tạo dây dẫn chịu nhiệt, dây cáp ngầm phục vụ công trình trọng điểm quốc gia."
+    },
+    {
+      id: "vid-05",
+      slug: "evnnpc-phat-huy-vai-tro-sang-kien-cai-tien-ky-thuat-chuyen-doi-so",
+      title: "EVNNPC phát huy vai trò phong trào sáng kiến cải tiến kỹ thuật và chuyển đổi số trong quản lý vận hành",
+      youtubeId: "lGC9zZ4lL2A",
+      youtubeUrl: "https://www.youtube.com/watch?v=lGC9zZ4lL2A",
+      duration: "11:30",
+      thumbnail: "https://img.youtube.com/vi/lGC9zZ4lL2A/hqdefault.jpg",
+      badge: "CÔNG NGHIỆP ĐIỆN",
+      summary: "Ứng dụng flycam và camera nhiệt phát hiện nguy cơ sự cố lưới điện truyền tải cao áp miền Bắc."
+    },
+    {
+      id: "vid-06",
+      slug: "doanh-nghiep-nganh-giay-doi-moi-cong-nghe-bao-ve-moi-truong",
+      title: "Doanh nghiệp ngành giấy đổi mới công nghệ sâu để bảo vệ môi trường",
+      youtubeId: "9HnIZZ0Kvkw",
+      youtubeUrl: "https://www.youtube.com/watch?v=9HnIZZ0Kvkw",
+      duration: "08:15",
+      thumbnail: "https://img.youtube.com/vi/9HnIZZ0Kvkw/hqdefault.jpg",
+      badge: "CHUYỂN ĐỔI XANH",
+      summary: "Đầu tư hệ thống xử lý nước thải sinh học và tận dụng hơi nước tái sinh năng lượng."
+    },
+    {
+      id: "vid-07",
+      slug: "da-dang-tieu-thu-san-pham-cam-qua-thuong-mai-dien-tu",
+      title: "Đa dạng hóa kênh tiêu thụ nông sản chủ lực qua sàn thương mại điện tử",
+      youtubeId: "V33FiL9oN6A",
+      youtubeUrl: "https://www.youtube.com/watch?v=V33FiL9oN6A",
+      duration: "07:45",
+      thumbnail: "https://img.youtube.com/vi/V33FiL9oN6A/hqdefault.jpg",
+      badge: "THƯƠNG MẠI SỐ",
+      summary: "Nông sản Việt Nam chinh phục người tiêu dùng nội địa và xuất khẩu qua sàn số quốc tế."
+    },
+    {
+      id: "vid-08",
+      slug: "quang-ba-kich-cau-tieu-dung-noi-dia-de-hang-viet-vuon-xa",
+      title: "Quảng bá, kích cầu tiêu dùng nội địa: Đòn bẩy giữ vững tăng trưởng bán lẻ",
+      youtubeId: "DdcigwmpYmQ",
+      youtubeUrl: "https://www.youtube.com/watch?v=DdcigwmpYmQ",
+      duration: "10:20",
+      thumbnail: "https://img.youtube.com/vi/DdcigwmpYmQ/hqdefault.jpg",
+      badge: "THỊ TRƯỜNG NỘI ĐỊA",
+      summary: "Chuỗi hội chợ Hàng Việt Nam chất lượng cao và tuần lễ kích cầu tiêu dùng nội địa."
     }
   ],
+
+  // 8. TOP 10 TIN MỚI NHẤT 24/7 (TIMELINE STREAM - THEO THUYẾT MINH MỤC 24)
+  topLatestNews: [
+    { time: "10:45", title: "EVNNPC phát huy vai trò phong trào sáng kiến cải tiến kỹ thuật và chuyển đổi số", slug: "evnnpc-phat-huy-vai-tro-sang-kien-cai-tien-ky-thuat-chuyen-doi-so", cat: "Công nghiệp" },
+    { time: "10:15", title: "Việt Nam đảm nhiệm thành công vai trò đối tác toàn diện CPTPP và EVFTA 2026", slug: "hiep-dinh-evfta-va-co-hoi-but-pha-nong-san-viet-sang-chau-au", cat: "Hội nhập" },
+    { time: "09:50", title: "Bộ Công Thương đồng hành hỗ trợ doanh nghiệp nông sản mở rộng thị phần tại EU và Hoa Kỳ", slug: "da-dang-tieu-thu-san-pham-cam-qua-thuong-mai-dien-tu", cat: "Thương mại" },
+    { time: "09:20", title: "Đẩy nhanh tiến độ thi công các dự án đường dây 500kV mạch 3 giải tỏa công suất điện", slug: "chuyen-doi-so-de-tiet-kiem-va-su-dung-hieu-qua-nang-luong", cat: "Năng lượng" },
+    { time: "08:45", title: "Tổng kim ngạch xuất nhập khẩu 9 tháng đầu năm lập kỷ lục mới vượt mốc 570 tỷ USD", slug: "bien-dong-ty-gia-va-chuoi-cung-ung-xuat-nhap-khau-2026", cat: "Xuất nhập khẩu" },
+    { time: "08:10", title: "Tăng cường kiểm tra, giám sát thị trường xăng dầu và hàng hóa thiết yếu phục vụ tiêu dùng", slug: "kiem-tra-giam-sat-nghiem-ngat-chuoi-cung-ung-xang-dau-toan-quoc", cat: "Quản lý thị trường" },
+    { time: "07:35", title: "Diễn đàn kết nối giao thương nông sản chế biến và chuyển giao công nghệ đóng gói xanh", slug: "mo-hinh-chuyen-doi-so-thanh-cong-tai-doanh-nghiep-xuc-tien-thuong-mai", cat: "Xúc tiến thương mại" },
+    { time: "07:00", title: "Chỉ số sản xuất công nghiệp IIP tháng 9 duy trì đà tăng trưởng tích cực trên cả nước", slug: "doanh-nghiep-nganh-giay-doi-moi-cong-nghe-bao-ve-moi-truong", cat: "Công nghiệp" },
+    { time: "06:20", title: "Phát động chiến dịch toàn dân thực hành tiết kiệm điện và sử dụng năng lượng tái tạo", slug: "quy-hoach-dien-viii-dot-pha-chuyen-dich-nang-luong-xanh-viet-nam", cat: "Năng lượng" },
+    { time: "05:45", title: "Triển khai cơ chế mua bán điện trực tiếp DPPA tạo đột phá thu hút vốn đầu tư công nghiệp sạch", slug: "tu-noi-lo-moi-truong-tro-xi-thanh-vat-lieu-xay-dung", cat: "Đầu tư" }
+  ],
+
+  // 9. DANH SÁCH TỪ KHÓA CẤM (BLACKLIST FILTER CHO BÌNH LUẬN - HỌP 02/10 MỤC 10)
+  bannedWords: [
+    "lừa đảo", "chửi thề", "xúc phạm", "bậy bạ", "phản động", "đm", "đcm", "dm", "fuck", "shit", "scam", "lua dao", "cho chet"
+  ],
+
+  // 10. MẪU BÀI VIẾT DẠNG ALBUM ẢNH (PHOTO STORY / TẠP CHÍ ẢNH - HỌP 02/10 MỤC 6)
+  photoStory: {
+    title: "Phóng sự ảnh: Đại công trường xây dựng đường dây 500kV mạch 3 xuyên rừng vượt núi",
+    sapo: "Ghi nhận chân thực và sống động từ các đỉnh núi cao miền Trung, nơi hàng nghìn kỹ sư, công nhân ngành điện đang ngày đêm nỗ lực hoàn thành siêu dự án truyền tải điện trọng điểm quốc gia đúng tiến độ lịch sử.",
+    publishedAt: "05/10/2026 15:30 GMT+7",
+    author: "NHÓM PHÓNG VIÊN TRUYỀN HÌNH CÔNG THƯƠNG",
+    photos: [
+      {
+        order: "01",
+        src: "assets/images/hero.jpg",
+        caption: "Bình minh trên đỉnh đèo nơi dựng cột thép siêu cao áp 500kV. Các kỹ sư bắt đầu ca làm việc từ 5h sáng để tránh nắng nóng gay gắt.",
+        credit: "Ảnh: Trọng Hải"
+      },
+      {
+        order: "02",
+        src: "assets/images/featured-01.jpg",
+        caption: "Vận chuyển vật tư, cấu kiện cột thép nặng hàng chục tấn vượt qua những sườn dốc hiểm trở bằng hệ thống tời tự chế an toàn.",
+        credit: "Ảnh: Nguyễn Văn"
+      },
+      {
+        order: "03",
+        src: "assets/images/featured-05.jpg",
+        caption: "Kỹ sư trẻ điều khiển thiết bị flycam hiện đại rà soát độ siết bu-lông và kiểm tra cân chỉnh dây dẫn ở độ cao gần 100 mét.",
+        credit: "Ảnh: Quang Minh"
+      },
+      {
+        order: "04",
+        src: "assets/images/featured-06.jpg",
+        caption: "Bữa cơm dã chiến ấm tình đồng nghiệp ngay dưới chân cột điện sau những giờ phút treo mình trên không trung kéo dây.",
+        credit: "Ảnh: CTV"
+      },
+      {
+        order: "05",
+        src: "assets/images/featured-02.jpg",
+        caption: "Lãnh đạo Bộ Công Thương và Tập đoàn Điện lực Việt Nam trực tiếp đến hiện trường kiểm tra, động viên và tặng quà kỹ sư công nhân.",
+        credit: "Ảnh: Ban Truyền thông"
+      }
+    ]
+  },
+
 
   // 8. CÁC KHỐI CHUYÊN MỤC BÁO CHÍ CHUYÊN SÂU (3 Cột The Wired)
   categoryBlocks: {
@@ -223,21 +327,21 @@ const TRUYEN_HINH_CONG_THUONG_DATA = {
           slug: "evnnpc-phat-huy-vai-tro-sang-kien-cai-tien-ky-thuat-chuyen-doi-so",
           title: "EVNNPC phát huy vai trò phong trào sáng kiến cải tiến kỹ thuật và chuyển đổi số",
           timeAgo: "1 giờ trước",
-          image: "http://img.youtube.com/vi/lGC9zZ4lL2A/0.jpg",
+          image: "assets/images/featured-01.jpg",
           sapo: "Phát huy sáng kiến, cải tiến kỹ thuật, đẩy mạnh chuyển đổi số gắn với xây dựng văn hóa doanh nghiệp luôn là chìa khóa quyết định năng suất lao động."
         },
         {
           slug: "doanh-nghiep-nganh-giay-doi-moi-cong-nghe-bao-ve-moi-truong",
           title: "Doanh nghiệp ngành giấy đổi mới công nghệ để bảo vệ môi trường và giảm phát thải",
           timeAgo: "3 giờ trước",
-          image: "http://img.youtube.com/vi/9HnIZZ0Kvkw/0.jpg",
+          image: "assets/images/featured-02.jpg",
           sapo: "Ngành công nghiệp sản xuất giấy và bột giấy đẩy mạnh xử lý nước thải tuần hoàn và tối ưu hóa nhiệt lò hơi nhằm đáp ứng chứng chỉ xanh quốc tế."
         },
         {
           slug: "tu-noi-lo-moi-truong-tro-xi-thanh-vat-lieu-xay-dung",
           title: "Từ nỗi lo môi trường tro, xỉ nhiệt điện thành nguồn tài nguyên vật liệu xây dựng quý",
           timeAgo: "Hôm qua",
-          image: "http://img.youtube.com/vi/GMcFabBa3Lk/0.jpg",
+          image: "assets/images/featured-05.jpg",
           sapo: "Khoa học kỹ thuật và cơ chế khuyến khích đã biến tro xỉ nhiệt điện thành phụ gia khoáng hoạt tính cho xi măng và đắp nền đường cao tốc."
         }
       ]
@@ -251,21 +355,21 @@ const TRUYEN_HINH_CONG_THUONG_DATA = {
           slug: "da-dang-tieu-thu-san-pham-cam-qua-thuong-mai-dien-tu",
           title: "Đa dạng hóa kênh tiêu thụ sản phẩm Cam qua hệ thống sàn thương mại điện tử",
           timeAgo: "2 giờ trước",
-          image: "http://img.youtube.com/vi/V33FiL9oN6A/0.jpg",
+          image: "assets/images/featured-03.jpg",
           sapo: "Kết hợp linh hoạt giữa phân phối siêu thị truyền thống và livestream bán lẻ trên sàn số giúp người nông dân giảm phụ thuộc vào thương lái."
         },
         {
           slug: "quang-ba-kich-cau-tieu-dung-noi-dia-de-hang-viet-vuon-xa",
           title: "Quảng bá, kích cầu tiêu dùng nội địa: Hàng Việt tiếp tục chinh phục người tiêu dùng",
           timeAgo: "4 giờ trước",
-          image: "http://img.youtube.com/vi/DdcigwmpYmQ/0.jpg",
+          image: "assets/images/featured-04.jpg",
           sapo: "Bộ Công Thương đẩy mạnh tuần hàng Việt tại 63 tỉnh thành nhằm kích cầu tiêu dùng nội địa trong các tháng cao điểm cuối năm."
         },
         {
           slug: "mo-hinh-chuyen-doi-so-thanh-cong-tai-doanh-nghiep-xuc-tien-thuong-mai",
           title: "Mô hình chuyển đổi số thành công tại doanh nghiệp hoạt động xúc tiến thương mại",
           timeAgo: "Hôm qua",
-          image: "http://img.youtube.com/vi/MEDXKapfWYY/0.jpg",
+          image: "assets/images/featured-06.jpg",
           sapo: "Hệ sinh thái kết nối giao thương B2B trực tuyến giúp các doanh nghiệp Việt Nam tìm kiếm đối tác nhập khẩu mà không tốn chi phí đi lại."
         }
       ]
@@ -279,21 +383,21 @@ const TRUYEN_HINH_CONG_THUONG_DATA = {
           slug: "chuyen-doi-so-de-tiet-kiem-va-su-dung-hieu-qua-nang-luong",
           title: "Chuyển đổi số để tiết kiệm và sử dụng hiệu quả năng lượng trong doanh nghiệp sản xuất",
           timeAgo: "5 giờ trước",
-          image: "http://img.youtube.com/vi/Q4cg2Xu8AK0/0.jpg",
+          image: "assets/images/hero.jpg",
           sapo: "Hệ thống quản lý năng lượng thông minh ISO 50001 kết hợp cảm biến IoT giúp các nhà máy tiết giảm từ 8% đến 15% hóa đơn tiền điện hàng tháng."
         },
         {
           slug: "phat-trien-khoa-hoc-cong-nghe-nghi-quyet-57",
           title: "Phát triển khoa học, công nghệ và đổi mới sáng tạo theo Nghị quyết 57-NQ/TW của Bộ Chính trị",
           timeAgo: "Hôm qua",
-          image: "http://img.youtube.com/vi/hrjl-dhGn5M/0.jpg",
+          image: "assets/images/featured-01.jpg",
           sapo: "Kinh tế số và xã hội số đang trở thành động lực then chốt nâng cao năng suất các ngành công nghiệp chế biến chế tạo Việt Nam."
         },
         {
           slug: "tang-cuong-ung-dung-cong-nghe-khoa-hoc-chuyen-doi-so-dong-bao-dan-toc",
           title: "Tăng cường ứng dụng công nghệ khoa học và chuyển đổi số cho bà con vùng đồng bào dân tộc",
           timeAgo: "2 ngày trước",
-          image: "http://img.youtube.com/vi/kiYPsWdo6m8/0.jpg",
+          image: "assets/images/featured-05.jpg",
           sapo: "Hỗ trợ bà con nông dân vùng cao đưa đặc sản bản địa lên các nền tảng thương mại số, tạo sinh kế bền vững."
         }
       ]

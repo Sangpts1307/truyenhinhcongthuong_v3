@@ -79,39 +79,61 @@ function loadArticleDetail() {
   loadRelatedArticles(slug);
 }
 
-// 2. TẢI CÁC BÀI VIẾT LIÊN QUAN
+// 2. TẢI CÁC BÀI VIẾT LIÊN QUAN (TOP 10 BÀI THEO THUYẾT MINH MỤC 25 & HỌP 02/10)
 function loadRelatedArticles(currentSlug) {
-  const container = document.getElementById("related-articles-grid");
-  if (!container) return;
+  const gridContainer = document.getElementById("related-articles-grid");
+  const listContainer = document.getElementById("related-articles-compact-list");
 
   const allArticles = [
     TRUYEN_HINH_CONG_THUONG_DATA.leadStory,
     ...TRUYEN_HINH_CONG_THUONG_DATA.heroSubStories,
     ...TRUYEN_HINH_CONG_THUONG_DATA.categoryBlocks.congNghiep.articles,
-    ...TRUYEN_HINH_CONG_THUONG_DATA.categoryBlocks.thuongMai.articles
-  ].filter(a => a.slug !== currentSlug).slice(0, 4);
+    ...TRUYEN_HINH_CONG_THUONG_DATA.categoryBlocks.thuongMai.articles,
+    ...TRUYEN_HINH_CONG_THUONG_DATA.categoryBlocks.hoiNhap.articles
+  ].filter(a => a.slug !== currentSlug);
 
-  container.innerHTML = allArticles.map(item => `
-    <article class="group flex flex-col justify-between">
-      <div class="relative rounded overflow-hidden aspect-[16/10] bg-slate-100 mb-3">
-        <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+  // 4 bài card có ảnh đại diện lớn
+  if (gridContainer) {
+    const top4 = allArticles.slice(0, 4);
+    gridContainer.innerHTML = top4.map(item => `
+      <article class="group flex flex-col justify-between p-3 rounded-lg border border-slate-200 bg-white hover:shadow-md transition">
+        <div>
+          <div class="relative rounded overflow-hidden aspect-video thumb-16-9 bg-slate-100 mb-3">
+            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <span class="text-[10px] font-extrabold uppercase tracking-wider text-red-600 mb-1 block">${item.kicker || "TIN LIÊN QUAN"}</span>
+          <h4 class="font-bold text-xs sm:text-sm text-slate-900 group-hover:text-blue-700 transition-colors line-clamp-2 mb-2 leading-snug">
+            <a href="detail.html?slug=${item.slug}">${item.title}</a>
+          </h4>
+        </div>
+        <span class="text-[10px] text-slate-400 block pt-2 border-t border-slate-100">${item.timeAgo || "Gần đây"}</span>
+      </article>
+    `).join("");
+  }
+
+  // 6 bài tiếp theo dạng danh sách timeline (Tổng cộng đủ Top 10 bài)
+  if (listContainer) {
+    const next6 = allArticles.slice(4, 10);
+    listContainer.innerHTML = next6.map(item => `
+      <div class="flex items-center justify-between py-2 border-b border-slate-100 last:border-0 hover:bg-slate-50 px-2 rounded transition">
+        <a href="detail.html?slug=${item.slug}" class="text-xs font-semibold text-slate-800 hover:text-red-600 transition truncate pr-4">
+          • ${item.title}
+        </a>
+        <span class="text-[10px] text-slate-400 flex-shrink-0">${item.timeAgo || "Mới nhất"}</span>
       </div>
-      <span class="text-[10px] font-extrabold uppercase tracking-wider text-red-600 mb-1">${item.kicker || "TIN LIÊN QUAN"}</span>
-      <h4 class="font-bold text-sm text-slate-900 group-hover:text-blue-700 transition-colors line-clamp-2 mb-2">
-        <a href="detail.html?slug=${item.slug}">${item.title}</a>
-      </h4>
-      <span class="text-[11px] text-slate-400">${item.timeAgo || "Gần đây"}</span>
-    </article>
-  `).join("");
+    `).join("");
+  }
 }
 
-// 3. CÔNG CỤ ĐỌC BÀI (FONT SIZE, COPY LINK, PRINT)
+// 3. CÔNG CỤ ĐỌC BÀI & CHIA SẺ MẠNG XÃ HỘI (FACEBOOK, ZALO, COPY LINK, PRINT)
 function initReadingTools() {
   const contentEl = document.getElementById("article-content");
   const zoomInBtn = document.getElementById("zoom-in-btn");
   const zoomOutBtn = document.getElementById("zoom-out-btn");
   const copyLinkBtn = document.getElementById("copy-link-btn");
   const printBtn = document.getElementById("print-article-btn");
+  const shareFbBtn = document.getElementById("share-facebook-btn");
+  const shareZaloBtn = document.getElementById("share-zalo-btn");
   const toast = document.getElementById("toast-message");
 
   let currentFontSize = 18; // px
@@ -131,6 +153,22 @@ function initReadingTools() {
         currentFontSize -= 2;
         contentEl.style.fontSize = `${currentFontSize}px`;
       }
+    });
+  }
+
+  // Nút chia sẻ Facebook (Họp 02/10 mục 8 & Thuyết minh mục 32)
+  if (shareFbBtn) {
+    shareFbBtn.addEventListener("click", () => {
+      const url = encodeURIComponent(window.location.href);
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank", "width=600,height=500,scrollbars=yes");
+    });
+  }
+
+  // Nút chia sẻ Zalo
+  if (shareZaloBtn) {
+    shareZaloBtn.addEventListener("click", () => {
+      const url = encodeURIComponent(window.location.href);
+      window.open(`https://sp.zalo.me/share_inline?link=${url}`, "_blank", "width=600,height=500,scrollbars=yes");
     });
   }
 
@@ -162,13 +200,14 @@ function initReadingTools() {
   }
 }
 
-// 4. KHUNG BÌNH LUẬN TƯƠNG TÁC (MOCKUP COMMENTS)
+// 4. KHUNG BÌNH LUẬN TƯƠNG TÁC CÓ BỘ LỌC TỪ CẤM (BLACKLIST - HỌP 02/10 MỤC 10)
 function initCommentForm() {
   const commentList = document.getElementById("comment-list");
   const commentForm = document.getElementById("comment-form");
   const nameInput = document.getElementById("comment-name");
   const textInput = document.getElementById("comment-text");
   const commentCount = document.getElementById("comment-count");
+  const commentAlert = document.getElementById("comment-alert");
 
   // Hiển thị bình luận mẫu ban đầu
   if (commentList && TRUYEN_HINH_CONG_THUONG_DATA.comments) {
@@ -202,6 +241,23 @@ function initCommentForm() {
 
       if (!name || !content) return;
 
+      // KIỂM TRA TỪ KHÓA CẤM (BLACKLIST FILTER - THEO YÊU CẦU HỌP 02/10)
+      const bannedWords = TRUYEN_HINH_CONG_THUONG_DATA.bannedWords || [];
+      const lowerContent = content.toLowerCase();
+      const foundBanned = bannedWords.filter(w => lowerContent.includes(w.toLowerCase()));
+
+      if (foundBanned.length > 0) {
+        if (commentAlert) {
+          commentAlert.innerHTML = `<strong>⚠️ Tự động từ chối bình luận:</strong> Nội dung chứa từ ngữ không phù hợp chuẩn mực ngôn luận báo chí (<em>${foundBanned.join(", ")}</em>). Vui lòng điều chỉnh lại trước khi gửi!`;
+          commentAlert.classList.remove("hidden");
+        } else {
+          alert(`⚠️ Bình luận chứa từ ngữ không phù hợp quy định ("${foundBanned.join(", ")}"). Vui lòng chỉnh sửa lại!`);
+        }
+        return;
+      }
+
+      if (commentAlert) commentAlert.classList.add("hidden");
+
       const newComment = {
         id: "cmt-" + Date.now(),
         author: name,
@@ -216,7 +272,7 @@ function initCommentForm() {
 
       nameInput.value = "";
       textInput.value = "";
-      alert("Cảm ơn bạn! Bình luận của bạn đã được đăng tải thành công.");
+      alert("Cảm ơn bạn! Bình luận của bạn đã được kiểm duyệt tự động hợp lệ và đăng tải thành công.");
     });
   }
 }

@@ -3,10 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Media Truyền Hình — Truyền Hình Công Thương</title>
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <title>Kho Video & Media Truyền Hình — Truyền Hình Công Thương</title>
+  <meta name="description" content="Kho video phóng sự, bản tin thời sự 24h, tọa đàm kinh tế và clip chuyên đề trực quan của Truyền hình Bộ Công Thương.">
+  <link rel="icon" type="image/png" href="logo.png">
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="video.other">
+  <meta property="og:title" content="Kho Video & Media — Truyền Hình Công Thương">
+  <meta property="og:description" content="Xem video bản tin thời sự 24/7, tọa đàm chính sách và phóng sự công nghiệp thương mại.">
+  <meta property="og:image" content="https://img.youtube.com/vi/Q4cg2Xu8AK0/hqdefault.jpg">
+
+  <!-- Google Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -36,104 +47,468 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="bg-brand-navy text-slate-100 font-sans antialiased selection:bg-red-600 selection:text-white">
-
-  <!-- TOP UTILITY BAR -->
-  <aside class="bg-slate-900 text-slate-300 text-xs border-b border-slate-800" aria-label="Thanh chỉ số thị trường">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
-      <div class="flex items-center gap-2 font-medium tracking-wide">
-        <span class="inline-block w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
-        <span class="text-white font-bold">TRUYỀN HÌNH TRỰC TUYẾN 24/7</span>
+<body class="bg-[#071526] text-slate-100 font-sans antialiased selection:bg-red-600 selection:text-white">
+  <!-- ========================================================================= -->
+  <!-- 0. TOP BANNER LEADERBOARD (FULL ĐẸP CHUẨN ẢNH MẪU 1)                       -->
+  <!-- ========================================================================= -->
+  <aside class="w-full bg-[#F4F5F6] border-b border-slate-200 py-2 hidden sm:block" aria-label="Banner đầu trang">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 flex justify-center">
+      <div class="relative w-full max-w-[1240px] overflow-hidden rounded border border-slate-200 bg-white shadow-xs group">
+        <a href="https://congthuong.vn" target="_blank" rel="noopener" class="block w-full">
+          <img src="assets/images/home-ad.jpg" alt="Tinh hoa Thương hiệu Việt - Tự hào Thương hiệu Quốc gia" class="w-full h-[90px] sm:h-[110px] md:h-[120px] object-cover object-center block mx-auto transition duration-300 group-hover:opacity-95" />
+        </a>
+        <span class="absolute top-1.5 right-1.5 bg-black/60 text-white text-[8px] font-bold px-1.5 py-0.5 uppercase tracking-wider rounded-xs pointer-events-none">Quảng cáo</span>
       </div>
-      <a href="index.html" class="text-slate-300 hover:text-white flex items-center gap-1 font-semibold">
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-        Trang Chủ Báo Điện Tử
-      </a>
     </div>
   </aside>
 
-  <!-- HEADER TRUYỀN HÌNH -->
-  <header class="bg-brand-navy border-b border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="assets/images/logo.png" alt="Logo" class="h-10 sm:h-12 object-contain brightness-0 invert" />
-        <div>
-          <h1 class="font-editorial text-xl sm:text-2xl font-black text-white leading-none">TRUYỀN HÌNH CÔNG THƯƠNG</h1>
-          <p class="text-[9px] uppercase tracking-[0.2em] font-bold text-red-400 mt-0.5">KÊNH TRUYỀN HÌNH BỘ CÔNG THƯƠNG</p>
+  <!-- ========================================================================= -->
+  <!-- 1. TOP HEADER WITH LOGO & UTILITIES (CHUẨN ẢNH MẪU 1)                      -->
+  <!-- ========================================================================= -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 py-2.5 flex items-center justify-between">
+      
+      <!-- LOGO + TEXT TRUYỀN HÌNH CÔNG THƯƠNG -->
+      <a href="index.html" class="flex items-center gap-3 sm:gap-4 group">
+        <img src="logo.png" alt="Công Thương TV" class="h-10 sm:h-12 md:h-14 w-auto object-contain flex-shrink-0" />
+        <div class="flex flex-col justify-center">
+          <span class="text-base sm:text-xl md:text-2xl font-black text-brand-red uppercase tracking-tight leading-none group-hover:text-red-700 transition-colors">
+            TRUYỀN HÌNH CÔNG THƯƠNG
+          </span>
+          <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-brand-blue mt-1">
+            TRUNG TÂM TRUYỀN THÔNG - TRUYỀN HÌNH CÔNG THƯƠNG
+          </span>
         </div>
       </a>
 
-      <!-- Menu nhanh -->
-      <nav class="hidden md:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-slate-300" aria-label="Menu video">
-        <a href="index.html" class="hover:text-white transition-colors">Trang Chủ</a>
-        <a href="video.html" class="text-red-400 font-black">Tất Cả Video</a>
-        <a href="category.html?cat=cong-nghiep" class="hover:text-white transition-colors">Công Nghiệp</a>
-        <a href="category.html?cat=thuong-mai" class="hover:text-white transition-colors">Thương Mại</a>
-      </nav>
+      <!-- CÁNH PHẢI: YOUTUBE, FACEBOOK, QUẢNG CÁO, SEARCH, USER, ĐĂNG KÝ BẢN TIN -->
+      <div class="hidden lg:flex items-center gap-4 text-xs text-slate-700 font-sans font-semibold">
+        <a href="https://youtube.com/@truyenhinhcongthuong" target="_blank" rel="noopener" class="flex items-center gap-1.5 text-slate-700 hover:text-red-600 transition" title="YouTube Truyền hình Công Thương">
+          <span class="w-5 h-5 rounded-full bg-red-600 text-white flex items-center justify-center">
+            <svg class="w-3 h-3 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M10 15l5-3-5-3v6z"/></svg>
+          </span>
+          <span class="font-bold">YouTube</span>
+        </a>
+
+        <a href="https://facebook.com/truyenhinhcongthuong" target="_blank" rel="noopener" class="flex items-center gap-1.5 text-slate-700 hover:text-blue-600 transition" title="Facebook Truyền hình Công Thương">
+          <span class="w-5 h-5 rounded-full bg-[#1877F2] text-white flex items-center justify-center">
+            <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </span>
+          <span class="font-bold">Facebook</span>
+        </a>
+
+        <a href="tel:02439342228" class="flex items-center gap-1.5 text-slate-700 hover:text-brand-red transition" title="Hotline quảng cáo: 024.3934.2228">
+          <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
+          <span class="font-bold">Quảng cáo</span>
+        </a>
+
+        <button onclick="document.getElementById('search-modal') && document.getElementById('search-modal').classList.remove('hidden')" class="p-1.5 text-slate-600 hover:text-black transition" aria-label="Tìm kiếm bài viết">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </button>
+
+        <a href="tel:02439342228" class="p-1.5 text-slate-600 hover:text-black transition" aria-label="Tài khoản">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        </a>
+
+        <a href="#newsletter" class="px-3.5 py-1.5 rounded-md bg-[#1A73E8] hover:bg-blue-700 text-white font-bold text-xs tracking-wide transition shadow-sm">
+          Đăng ký Bản tin
+        </a>
+      </div>
+
     </div>
+
+    <nav class="bg-[#B91C1C] text-white shadow-md sticky top-0 z-40" aria-label="Menu chính">
+      <div class="max-w-[1440px] mx-auto px-4 sm:px-6 flex items-center justify-between">
+        
+        <button id="mobile-menu-toggle" class="lg:hidden p-2.5 text-white hover:bg-red-800 transition-colors" aria-label="Menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+
+        <ul class="flex items-center overflow-visible text-xs font-bold uppercase tracking-wider py-0">
+          <li class="flex-shrink-0">
+            <a href="index.html" class="flex items-center px-3.5 py-3 hover:bg-red-800 text-white transition-colors" title="Trang chủ">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            </a>
+          </li>
+          <li class="text-white/40 font-light select-none px-1">|</li>
+          
+          <!-- TIN TỨC -->
+          <li class="flex-shrink-0 nav-item-dropdown">
+            <a href="category.html?cat=thoi-su" class="px-2.5 py-3 inline-flex items-center gap-1 hover:bg-red-800 transition-colors">
+              <span>TIN TỨC</span>
+              <svg class="w-2.5 h-2.5 opacity-70" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+            </a>
+            <div class="nav-dropdown-content">
+              <a href="category.html?cat=thoi-su">Thời sự trong ngày</a>
+              <a href="category.html?cat=thoi-su">Chính sách & Pháp luật</a>
+              <a href="category.html?cat=thoi-su">Kinh tế vĩ mô</a>
+              <a href="category.html?cat=thoi-su">Hoạt động Bộ Công Thương</a>
+            </div>
+          </li>
+          <li class="text-white/40 font-light select-none px-1">|</li>
+
+          <!-- CÔNG NGHIỆP -->
+          <li class="flex-shrink-0 nav-item-dropdown">
+            <a href="category.html?cat=cong-nghiep" class="px-2.5 py-3 inline-flex items-center gap-1 hover:bg-red-800 transition-colors">
+              <span>CÔNG NGHIỆP</span>
+              <svg class="w-2.5 h-2.5 opacity-70" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+            </a>
+            <div class="nav-dropdown-content">
+              <a href="category.html?cat=cong-nghiep">Năng lượng & Điện lực</a>
+              <a href="category.html?cat=cong-nghiep">Dầu khí & Xăng dầu</a>
+              <a href="category.html?cat=cong-nghiep">Công nghiệp chế biến</a>
+              <a href="category.html?cat=cong-nghiep">Than & Khoáng sản</a>
+            </div>
+          </li>
+          <li class="text-white/40 font-light select-none px-1">|</li>
+
+          <!-- THƯƠNG MẠI -->
+          <li class="flex-shrink-0 nav-item-dropdown">
+            <a href="category.html?cat=thuong-mai" class="px-2.5 py-3 inline-flex items-center gap-1 hover:bg-red-800 transition-colors">
+              <span>THƯƠNG MẠI</span>
+              <svg class="w-2.5 h-2.5 opacity-70" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+            </a>
+            <div class="nav-dropdown-content">
+              <a href="category.html?cat=thuong-mai">Xuất nhập khẩu</a>
+              <a href="category.html?cat=thuong-mai">Thị trường nội địa</a>
+              <a href="category.html?cat=thuong-mai">Quản lý thị trường</a>
+              <a href="category.html?cat=thuong-mai">Xúc tiến thương mại</a>
+            </div>
+          </li>
+          <li class="text-white/40 font-light select-none px-1">|</li>
+
+          <!-- HỘI NHẬP -->
+          <li class="flex-shrink-0 nav-item-dropdown">
+            <a href="category.html?cat=hoi-nhap" class="px-2.5 py-3 inline-flex items-center gap-1 hover:bg-red-800 transition-colors">
+              <span>HỘI NHẬP</span>
+              <svg class="w-2.5 h-2.5 opacity-70" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+            </a>
+            <div class="nav-dropdown-content">
+              <a href="category.html?cat=hoi-nhap">Hiệp định EVFTA</a>
+              <a href="category.html?cat=hoi-nhap">Hiệp định CPTPP</a>
+              <a href="category.html?cat=hoi-nhap">AEC & RCEP</a>
+              <a href="category.html?cat=hoi-nhap">WTO & Hội nhập quốc tế</a>
+            </div>
+          </li>
+          <li class="text-white/40 font-light select-none px-1">|</li>
+
+          <!-- THƯƠNG HIỆU -->
+          <li class="flex-shrink-0 nav-item-dropdown">
+            <a href="category.html?cat=thuong-hieu" class="px-2.5 py-3 inline-flex items-center gap-1 hover:bg-red-800 transition-colors">
+              <span>THƯƠNG HIỆU</span>
+              <svg class="w-2.5 h-2.5 opacity-70" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+            </a>
+            <div class="nav-dropdown-content">
+              <a href="category.html?cat=thuong-hieu">Thương hiệu Quốc gia</a>
+              <a href="category.html?cat=thuong-hieu">Tự hào hàng Việt</a>
+              <a href="category.html?cat=thuong-hieu">Sản phẩm OCOP tiêu biểu</a>
+            </div>
+          </li>
+          <li class="text-white/40 font-light select-none px-1">|</li>
+
+          <!-- KHOA HỌC CÔNG NGHỆ -->
+          <li class="flex-shrink-0 nav-item-dropdown">
+            <a href="category.html?cat=chuyen-doi-so" class="px-2.5 py-3 inline-flex items-center gap-1 hover:bg-red-800 transition-colors">
+              <span>KHOA HỌC CÔNG NGHỆ</span>
+              <svg class="w-2.5 h-2.5 opacity-70" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+            </a>
+            <div class="nav-dropdown-content">
+              <a href="category.html?cat=chuyen-doi-so">Chuyển đổi số doanh nghiệp</a>
+              <a href="category.html?cat=chuyen-doi-so">Công nghệ 4.0</a>
+              <a href="category.html?cat=chuyen-doi-so">Đổi mới sáng tạo</a>
+            </div>
+          </li>
+          <li class="text-white/40 font-light select-none px-1">|</li>
+
+          <!-- DOANH NGHIỆP -->
+          <li class="flex-shrink-0">
+            <a href="category.html?cat=doanh-nghiep" class="px-2.5 py-3 inline-block hover:bg-red-800 transition-colors">DOANH NGHIỆP</a>
+          </li>
+          <li class="text-white/40 font-light select-none px-1">|</li>
+
+          <!-- VĂN HÓA CÔNG THƯƠNG -->
+          <li class="flex-shrink-0">
+            <a href="category.html?cat=van-hoa-cong-thuong" class="px-2.5 py-3 inline-block hover:bg-red-800 transition-colors">VĂN HÓA CÔNG THƯƠNG</a>
+          </li>
+          <li class="text-white/40 font-light select-none px-1">|</li>
+
+          <!-- VIDEO (ACTIVE TRÊN TRANG NÀY) -->
+          <li class="flex-shrink-0">
+            <a href="video.html" class="px-3.5 py-3 inline-flex items-center gap-1.5 bg-red-900/60 font-black text-amber-300 transition-colors relative">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M4 6.47v11.06c0 1.25 1.37 2.02 2.45 1.38l9.47-5.53c1.05-.61 1.05-2.15 0-2.76L6.45 5.09C5.37 4.45 4 5.22 4 6.47z"/></svg>
+              <span>VIDEO</span>
+              <span class="absolute bottom-0 inset-x-2 h-1 bg-white"></span>
+            </a>
+          </li>
+          <li class="text-white/40 font-light select-none px-1">|</li>
+
+          <!-- TẠP CHÍ ẢNH -->
+          <li class="flex-shrink-0">
+            <a href="photo-story.html" class="px-2.5 py-3 inline-block hover:bg-red-800 transition-colors text-amber-200">TẠP CHÍ ẢNH</a>
+          </li>
+        </ul>
+
+        <!-- Icon Tìm kiếm -->
+        <button id="open-search-btn" class="p-2.5 hover:bg-red-800 text-white transition-colors flex-shrink-0" aria-label="Tìm kiếm bài viết">
+          <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </button>
+      </div>
+    </nav>
   </header>
 
-  <!-- MAIN VIDEO CONTENT -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-    
-    <!-- FEATURED VIDEO PLAYER HERO -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+  <!-- ========================================================================= -->
+  <!-- SITE LAYOUT WITH SIDE GUTTER BANNERS (2 BÊN NGOÀI VIỀN TRỐNG - HỌP 02/10) -->
+  <!-- ========================================================================= -->
+  <div class="site-layout-with-gutters">
+
+    <!-- CÁNH TRÁI: BANNER QUẢNG CÁO TRƯỢT 2 BÊN NGOÀI -->
+    <aside class="side-gutter-ad left-gutter" aria-label="Quảng cáo cánh trái">
+      <div class="ad-banner-card bg-slate-900 border-slate-700">
+        <span class="block text-[8px] text-slate-400 font-bold uppercase tracking-wider mb-1">Quảng cáo</span>
+        <a href="https://moit.gov.vn" target="_blank" rel="noopener">
+          <img src="assets/images/category-ad-vn-eu.jpg" alt="Hiệp định EVFTA - Cổng FTAs Bộ Công Thương" />
+        </a>
+        <span class="block text-[10px] font-bold text-slate-200 bg-slate-800 p-1 mt-1">Cổng FTAs Bộ Công Thương</span>
+      </div>
+      <div class="ad-banner-card bg-slate-900 border-slate-700">
+        <span class="block text-[8px] text-slate-400 font-bold uppercase tracking-wider mb-1">Quảng cáo</span>
+        <a href="https://congthuong.vn" target="_blank" rel="noopener">
+          <img src="assets/images/category-ad-vietnamese-goods.jpg" alt="Tự hào hàng Việt Nam" />
+        </a>
+        <span class="block text-[10px] font-bold text-slate-200 bg-slate-800 p-1 mt-1">Tự Hào Hàng Việt</span>
+      </div>
+    </aside>
+
+    <!-- MAIN VIDEO CONTENT WRAPPER -->
+    <div class="site-main-content-wrapper">
+      <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+        
+        <!-- FEATURED VIDEO PLAYER HERO -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+          
+          <!-- Video Player Chính (8 Cột) -->
+          <div class="lg:col-span-8">
+            <div class="video-frame-16-9 shadow-2xl border border-slate-700">
+              <iframe id="main-video-player" class="w-full h-full" src="https://www.youtube.com/embed/Q4cg2Xu8AK0?rel=0" title="Truyền Hình Công Thương" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="mt-4">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded bg-brand-red text-white text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
+                  ĐANG PHÁT SÓNG
+                </span>
+                <span class="text-xs text-slate-400 font-mono">Bản Tin HD 1080p</span>
+              </div>
+              <h1 id="current-video-title" class="font-editorial text-xl sm:text-2xl lg:text-3xl font-bold text-white mt-2 mb-2 leading-snug">
+                Bản tin Thời sự Công Thương 24h: Nỗ lực duy trì nhịp độ sản xuất và chuỗi cung ứng cuối năm
+              </h1>
+              <p id="current-video-desc" class="text-slate-300 text-sm leading-relaxed">
+                Tổng hợp toàn diện hoạt động điều hành của Lãnh đạo Bộ Công Thương, tình hình cung ứng điện sản xuất, giá cả các mặt hàng tiêu dùng thiết yếu và chuyển động của các thị trường xuất khẩu trọng điểm.
+              </p>
+            </div>
+          </div>
+
+          <!-- Playlist Video Gợi Ý Bên Cạnh (4 Cột) -->
+          <div class="lg:col-span-4 flex flex-col">
+            <div class="p-3 bg-slate-900 rounded-t-xl border border-slate-700 flex items-center justify-between">
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200 flex items-center gap-2">
+                <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"/></svg>
+                DANH SÁCH PHÁT MỚI NHẤT
+              </h3>
+              <span class="text-[11px] text-red-400 font-mono font-bold">8 BẢN TIN</span>
+            </div>
+            <div id="video-playlist" class="flex-1 bg-brand-navy-card rounded-b-xl border-x border-b border-slate-700 p-3 space-y-3 overflow-y-auto max-h-[520px]">
+              <!-- Render danh sách phát -->
+            </div>
+          </div>
+
+        </section>
+
+        <!-- BANNER QUẢNG CÁO GIỮA TRANG VIDEO -->
+        <div class="in-feed-ad-banner my-10 bg-slate-900 border-slate-700">
+          <div class="flex items-center justify-between pb-1.5 mb-1 border-b border-slate-800">
+            <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider">CHƯƠNG TRÌNH HỢP TÁC TRUYỀN THÔNG BỘ CÔNG THƯƠNG</span>
+            <span class="text-[9px] uppercase font-bold text-red-400 font-mono">QUẢNG CÁO</span>
+          </div>
+          <a href="https://congthuong.vn" target="_blank" rel="noopener">
+            <img src="assets/images/banner.jpg" alt="Chương trình Quảng bá Quốc gia" class="rounded shadow-xs max-h-[140px] w-full object-cover" />
+          </a>
+        </div>
+
+        <!-- TOÀN BỘ KHO PHÓNG SỰ VIDEO (3 CỘT) -->
+        <section class="border-t border-slate-800 pt-8">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-3">
+              <span class="w-3 h-3 bg-brand-red"></span>
+              <h2 class="font-editorial text-2xl font-bold text-white uppercase">KHO PHÓNG SỰ & TỌA ĐÀM CHUYÊN ĐỀ</h2>
+            </div>
+            <span class="text-xs text-slate-400 font-mono">Tất cả video đều phát chuẩn HD không viền đen</span>
+          </div>
+
+          <div id="all-videos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Render bởi script bên dưới -->
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <!-- CÁNH PHẢI: BANNER QUẢNG CÁO TRƯỢT 2 BÊN NGOÀI -->
+    <aside class="side-gutter-ad right-gutter" aria-label="Quảng cáo cánh phải">
+      <div class="ad-banner-card bg-slate-900 border-slate-700">
+        <span class="block text-[8px] text-slate-400 font-bold uppercase tracking-wider mb-1">Quảng cáo</span>
+        <a href="https://vietnamexpo.com.vn" target="_blank" rel="noopener">
+          <img src="assets/images/category-ad-brand.jpg" alt="Hội chợ Vietnam Expo" />
+        </a>
+        <span class="block text-[10px] font-bold text-slate-200 bg-slate-800 p-1 mt-1">Hội Chợ VIETNAM EXPO</span>
+      </div>
+      <div class="ad-banner-card bg-slate-900 border-slate-700">
+        <span class="block text-[8px] text-slate-400 font-bold uppercase tracking-wider mb-1">Quảng cáo</span>
+        <a href="https://moit.gov.vn" target="_blank" rel="noopener">
+          <img src="assets/images/category-ad-cbi.jpg" alt="Hợp tác xuất khẩu CBI Hà Lan" />
+        </a>
+        <span class="block text-[10px] font-bold text-slate-200 bg-slate-800 p-1 mt-1">Xuất Khẩu Bền Vững CBI</span>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER CHÍNH THỨC CỦA BỘ CÔNG THƯƠNG                                      -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#030914] text-white border-t-4 border-brand-red pt-12 pb-8 mt-16 font-sans">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6">
       
-      <!-- Video Player Chính (8 Cột) -->
-      <div class="lg:col-span-8">
-        <div class="rounded-xl overflow-hidden aspect-video bg-black shadow-2xl border border-slate-700">
-          <iframe id="main-video-player" class="w-full h-full" src="https://www.youtube.com/embed/Q4cg2Xu8AK0?rel=0" title="Truyền Hình Công Thương" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-slate-800">
+        
+        <!-- Cột 1: Thông tin cơ quan xuất bản -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="flex items-center gap-3">
+            <img src="logo.png" alt="Công Thương TV" class="h-12 w-auto object-contain brightness-0 invert" />
+            <div>
+              <h4 class="font-editorial text-lg font-black uppercase text-white leading-tight">TRUYỀN HÌNH CÔNG THƯƠNG</h4>
+              <p class="text-[10px] text-red-400 uppercase tracking-widest font-bold">CƠ QUAN NGÔN LUẬN CỦA BỘ CÔNG THƯƠNG</p>
+            </div>
+          </div>
+          <div class="text-xs text-slate-300 space-y-1.5 leading-relaxed pt-2">
+            <p><strong>Cơ quan chủ quản:</strong> Bộ Công Thương Việt Nam</p>
+            <p><strong>Giấy phép xuất bản báo chí số:</strong> 148/GP-BTTTT do Bộ Thông tin và Truyền thông cấp.</p>
+            <p><strong>Tổng Biên tập:</strong> Nguyễn Văn Hùng</p>
+            <p><strong>Phó Tổng Biên tập phụ trách Media:</strong> Trần Anh Tuấn</p>
+          </div>
         </div>
-        <div class="mt-4">
-          <span class="px-2.5 py-1 rounded bg-brand-red text-white text-[10px] font-bold uppercase tracking-wider">ĐANG PHÁT</span>
-          <h2 id="current-video-title" class="font-editorial text-xl sm:text-2xl font-bold text-white mt-2 mb-2">
-            Bản tin Thời sự Công Thương 24h: Nỗ lực duy trì nhịp độ sản xuất và chuỗi cung ứng cuối năm
-          </h2>
-          <p id="current-video-desc" class="text-slate-300 text-sm leading-relaxed">
-            Tổng hợp toàn diện hoạt động điều hành của Lãnh đạo Bộ Công Thương, tình hình cung ứng điện sản xuất, giá cả các mặt hàng tiêu dùng thiết yếu và chuyển động của các thị trường xuất khẩu trọng điểm.
-          </p>
+
+        <!-- Cột 2: Tòa soạn & Liên hệ -->
+        <div class="lg:col-span-4 space-y-2 text-xs text-slate-300 leading-relaxed">
+          <h4 class="text-xs font-black uppercase text-white tracking-widest border-l-2 border-brand-red pl-2 mb-3">TÒA SOẠN & TRỤ SỞ MEDIA</h4>
+          <p><strong>Địa chỉ tòa soạn:</strong> Số 54 Hai Bà Trưng, Phường Tràng Tiền, Quận Hoàn Kiếm, Thành phố Hà Nội.</p>
+          <p><strong>Trung tâm sản xuất hình ảnh & Video:</strong> Tầng 6, Tòa nhà Bộ Công Thương, 655 Phạm Văn Đồng, Bắc Từ Liêm, Hà Nội.</p>
+          <p><strong>Hotline bạn đọc & Media:</strong> <span class="text-red-400 font-bold font-mono">024.3934.2228</span> - <span class="text-red-400 font-mono">098.345.6789</span></p>
+          <p><strong>Hộp thư điện tử:</strong> <a href="mailto:toasoan@truyenhinhcongthuong.vn" class="text-slate-200 underline">toasoan@truyenhinhcongthuong.vn</a></p>
         </div>
+
+        <!-- Cột 3: Liên kết nhanh & Pháp lý -->
+        <div class="lg:col-span-3 space-y-2 text-xs text-slate-300">
+          <h4 class="text-xs font-black uppercase text-white tracking-widest border-l-2 border-brand-red pl-2 mb-3">KÊNH TRUYỀN THÔNG SỐ</h4>
+          <ul class="space-y-1.5">
+            <li><a href="https://youtube.com/@truyenhinhcongthuong" target="_blank" rel="noopener" class="hover:text-red-400 transition">Kênh YouTube Truyền Hình Công Thương</a></li>
+            <li><a href="https://facebook.com/truyenhinhcongthuong" target="_blank" rel="noopener" class="hover:text-red-400 transition">Trang Fanpage Facebook Chính Thức</a></li>
+            <li><a href="photo-story.html" class="hover:text-red-400 transition">Tạp chí ảnh & E-magazine</a></li>
+            <li><a href="video.html" class="text-amber-300 font-bold hover:text-white transition">Kho Video Phóng sự & Tọa đàm</a></li>
+            <li><a href="sitemap.xml" class="text-slate-400 hover:text-white transition">Sơ đồ trang (Sitemap XML)</a></li>
+          </ul>
+        </div>
+
       </div>
 
-      <!-- Playlist Video Gợi Ý Bên Cạnh (4 Cột) -->
-      <div class="lg:col-span-4 flex flex-col">
-        <div class="p-3 bg-slate-900/90 rounded-t-xl border border-slate-700 flex items-center justify-between">
-          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">DANH SÁCH PHÁT HOT</h3>
-          <span class="text-[11px] text-red-400 font-mono font-bold">4 VIDEO</span>
-        </div>
-        <div id="video-playlist" class="flex-1 bg-brand-navy-card rounded-b-xl border-x border-b border-slate-700 p-3 space-y-3 overflow-y-auto max-h-[480px]">
-          <!-- Render danh sách phát -->
-        </div>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
+        <p>© 2026 Bản quyền thuộc về Truyền Hình Công Thương. Ghi rõ nguồn trích dẫn khi phát hành lại thông tin.</p>
+        <p class="font-mono text-slate-500">Hệ thống The Wired Editorial Edition · v2.4</p>
       </div>
 
-    </section>
-
-    <!-- TOÀN BỘ KHO PHÓNG SỰ VIDEO (3 CỘT) -->
-    <section class="border-t border-slate-800 pt-8">
-      <div class="flex items-center justify-between mb-6">
-        <div class="flex items-center gap-3">
-          <span class="w-3 h-3 bg-brand-red"></span>
-          <h2 class="font-editorial text-2xl font-bold text-white uppercase">KHO PHÓNG SỰ & TỌA ĐÀM CHUYÊN ĐỀ</h2>
-        </div>
-        <span class="text-xs text-slate-400">Âm thanh & Hình ảnh sắc nét chuẩn HD</span>
-      </div>
-
-      <div id="all-videos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Render bởi script bên dưới -->
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-slate-950 text-slate-400 text-xs border-t-2 border-slate-800 py-8 mt-12 text-center">
-    <p class="text-white font-bold mb-1">TRUYỀN HÌNH CÔNG THƯƠNG MEDIA — BỘ CÔNG THƯƠNG VIỆT NAM</p>
-    <p>© 2026 Bản quyền phát thanh & truyền hình thuộc về Báo Công Thương. Giấy phép số 148/GP-BTTTT.</p>
+    </div>
   </footer>
+
+  <!-- ========================================================================= -->
+  <!-- MOBILE DRAWER & SEARCH MODAL                                              -->
+  <!-- ========================================================================= -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 pointer-events-none opacity-0 transition-opacity duration-300" aria-hidden="true">
+    <div class="drawer-backdrop" onclick="toggleMobileDrawer(false)"></div>
+    <div class="drawer-content p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+          <img src="logo.png" alt="Logo" class="h-10 w-auto" />
+          <button onclick="toggleMobileDrawer(false)" class="p-2 text-slate-600 hover:text-red-700" aria-label="Đóng menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <nav class="mt-6 flex flex-col space-y-1 text-sm font-bold uppercase tracking-wider text-slate-800">
+          <a href="index.html" class="py-2.5 px-3 rounded hover:bg-red-50 hover:text-brand-red">Trang Chủ</a>
+          <a href="category.html?cat=thoi-su" class="py-2.5 px-3 rounded hover:bg-red-50 hover:text-brand-red">Tin Tức Thời Sự</a>
+          <a href="category.html?cat=cong-nghiep" class="py-2.5 px-3 rounded hover:bg-red-50 hover:text-brand-red">Công Nghiệp</a>
+          <a href="category.html?cat=thuong-mai" class="py-2.5 px-3 rounded hover:bg-red-50 hover:text-brand-red">Thương Mại</a>
+          <a href="category.html?cat=hoi-nhap" class="py-2.5 px-3 rounded hover:bg-red-50 hover:text-brand-red">Hội Nhập EVFTA/CPTPP</a>
+          <a href="category.html?cat=thuong-hieu" class="py-2.5 px-3 rounded hover:bg-red-50 hover:text-brand-red">Thương Hiệu</a>
+          <a href="category.html?cat=chuyen-doi-so" class="py-2.5 px-3 rounded hover:bg-red-50 hover:text-brand-red">Khoa Học Công Nghệ</a>
+          <a href="category.html?cat=doanh-nghiep" class="py-2.5 px-3 rounded hover:bg-red-50 hover:text-brand-red">Doanh Nghiệp</a>
+          <a href="category.html?cat=van-hoa-cong-thuong" class="py-2.5 px-3 rounded hover:bg-red-50 hover:text-brand-red">Văn Hóa Công Thương</a>
+          <a href="video.html" class="py-2.5 px-3 rounded bg-red-100 text-brand-red font-black">Video Media</a>
+          <a href="photo-story.html" class="py-2.5 px-3 rounded hover:bg-red-50 text-amber-700 font-black">Tạp Chí Ảnh</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-slate-200 text-xs text-slate-500">
+        <p class="font-bold text-slate-700">Hotline: 024.3934.2228</p>
+        <p class="mt-1">Truyền Hình Công Thương · Bộ Công Thương</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div id="search-modal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-start justify-center pt-24 px-4">
+    <div class="bg-white rounded-lg max-w-xl w-full p-6 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-200 mb-4">
+        <h3 class="text-sm font-bold uppercase text-slate-800">Tìm kiếm video trên Truyền Hình Công Thương</h3>
+        <button onclick="document.getElementById('search-modal').classList.add('hidden')" class="text-slate-400 hover:text-slate-700">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <form action="category.html" method="GET" class="flex gap-2">
+        <input type="text" name="q" placeholder="Nhập từ khóa tìm kiếm video..." class="flex-1 p-3 border border-slate-300 rounded text-sm text-slate-800 focus:outline-none focus:border-brand-red" required />
+        <button type="submit" class="px-6 py-3 bg-brand-red text-white font-bold text-xs uppercase rounded hover:bg-red-800 transition">Tìm kiếm</button>
+      </form>
+    </div>
+  </div>
 
   <!-- JavaScript Modules -->
   <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
   <script>
+    function toggleMobileDrawer(open) {
+      const drawer = document.getElementById("mobile-drawer");
+      if (drawer) {
+        if (open) {
+          drawer.classList.remove("pointer-events-none", "opacity-0");
+          drawer.classList.add("open");
+        } else {
+          drawer.classList.add("pointer-events-none", "opacity-0");
+          drawer.classList.remove("open");
+        }
+      }
+    }
+
+    const menuToggle = document.getElementById("mobile-menu-toggle");
+    if (menuToggle) {
+      menuToggle.addEventListener("click", () => toggleMobileDrawer(true));
+    }
+
+    const searchBtn = document.getElementById("open-search-btn");
+    const searchModal = document.getElementById("search-modal");
+    if (searchBtn && searchModal) {
+      searchBtn.addEventListener("click", () => searchModal.classList.remove("hidden"));
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
       const player = document.getElementById("main-video-player");
       const titleEl = document.getElementById("current-video-title");
@@ -143,21 +518,20 @@
 
       const videos = TRUYEN_HINH_CONG_THUONG_DATA.broadcastVideos;
 
-      // Hàm chuyển video trên player
       window.selectVideo = function (ytId, title, desc) {
         if (player) player.src = `https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0`;
         if (titleEl) titleEl.textContent = title;
         if (descEl) descEl.textContent = desc;
-        window.scrollTo({ top: 120, behavior: 'smooth' });
+        window.scrollTo({ top: 180, behavior: 'smooth' });
       };
 
       // Render Playlist
-      if (playlist) {
+      if (playlist && videos) {
         playlist.innerHTML = videos.map(v => `
-          <div class="p-2.5 rounded-lg bg-slate-900/60 hover:bg-slate-800 transition-colors flex gap-3 cursor-pointer group" onclick="selectVideo('${v.youtubeId}', '${v.title.replace(/'/g, "\\'")}', '${v.summary.replace(/'/g, "\\'")}')">
-            <div class="relative w-28 h-16 rounded overflow-hidden flex-shrink-0 bg-black">
+          <div class="p-2.5 rounded-lg bg-slate-900/80 hover:bg-slate-800 transition-colors flex gap-3 cursor-pointer group border border-slate-800 hover:border-red-500/40" onclick="selectVideo('${v.youtubeId}', '${v.title.replace(/'/g, "\'")}', '${v.summary.replace(/'/g, "\'")}')">
+            <div class="relative w-28 sm:w-32 aspect-video rounded overflow-hidden flex-shrink-0 thumb-16-9 bg-black">
               <img src="${v.thumbnail}" alt="${v.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
-              <span class="absolute bottom-1 right-1 bg-black/80 text-[10px] font-mono px-1 rounded">${v.duration}</span>
+              <span class="absolute bottom-1 right-1 bg-black/80 text-[10px] font-mono px-1 rounded text-white">${v.duration}</span>
             </div>
             <div>
               <span class="text-[9px] font-extrabold uppercase text-red-400">${v.badge}</span>
@@ -168,13 +542,13 @@
       }
 
       // Render All Videos Grid
-      if (allGrid) {
+      if (allGrid && videos) {
         allGrid.innerHTML = videos.map(v => `
-          <div class="rounded-xl overflow-hidden bg-brand-navy-card border border-slate-700 hover:border-red-500/50 transition-all flex flex-col justify-between group cursor-pointer" onclick="selectVideo('${v.youtubeId}', '${v.title.replace(/'/g, "\\'")}', '${v.summary.replace(/'/g, "\\'")}')">
+          <div class="rounded-xl overflow-hidden bg-brand-navy-card border border-slate-700 hover:border-red-500/50 transition-all flex flex-col justify-between group cursor-pointer shadow-lg" onclick="selectVideo('${v.youtubeId}', '${v.title.replace(/'/g, "\'")}', '${v.summary.replace(/'/g, "\'")}')">
             <div>
-              <div class="relative aspect-video bg-black overflow-hidden">
+              <div class="relative aspect-video bg-black overflow-hidden video-thumb-crop">
                 <img src="${v.thumbnail}" alt="${v.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div class="absolute inset-0 bg-black/30 group-hover:bg-transparent flex items-center justify-center">
+                <div class="absolute inset-0 bg-black/30 group-hover:bg-transparent flex items-center justify-center transition-colors">
                   <div class="w-12 h-12 rounded-full bg-brand-red text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                     <svg class="w-6 h-6 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                   </div>

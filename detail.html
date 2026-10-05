@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chi Tiết Bài Viết — Truyền Hình Công Thương</title>
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <meta name="description" content="Chi tiết bản tin, phóng sự và bài viết chuyên đề của Truyền Hình Công Thương - Bộ Công Thương Việt Nam.">
+  <link rel="icon" type="image/png" href="logo.png">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -26,7 +27,8 @@
           fontFamily: {
             serif: ['Playfair Display', 'Georgia', 'serif'],
             sans: ['Be Vietnam Pro', 'sans-serif'],
-            mono: ['Space Grotesk', 'monospace']
+            mono: ['Space Grotesk', 'monospace'],
+            editorial: ['Playfair Display', 'Georgia', 'serif']
           }
         }
       }
@@ -37,63 +39,146 @@
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="bg-[#F8FAFC] text-slate-900 font-sans antialiased selection:bg-red-600 selection:text-white">
-
-  <!-- TOAST NOTIFICATION -->
-  <div id="toast-message" class="fixed bottom-6 right-6 z-50 px-5 py-3 rounded-lg bg-slate-900 text-white text-sm font-semibold shadow-2xl transition-all duration-300 opacity-0 pointer-events-none border border-slate-700">
-    Thông báo
-  </div>
+  <!-- ========================================================================= -->
+  <!-- 0. TOP BANNER LEADERBOARD (FULL ĐẸP CHUẨN ẢNH MẪU 1)                       -->
+  <!-- ========================================================================= -->
+  <aside class="w-full bg-[#F4F5F6] border-b border-slate-200 py-2 hidden sm:block" aria-label="Banner đầu trang">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 flex justify-center">
+      <div class="relative w-full max-w-[1240px] overflow-hidden rounded border border-slate-200 bg-white shadow-xs group">
+        <a href="https://congthuong.vn" target="_blank" rel="noopener" class="block w-full">
+          <img src="assets/images/home-ad.jpg" alt="Tinh hoa Thương hiệu Việt - Tự hào Thương hiệu Quốc gia" class="w-full h-[90px] sm:h-[110px] md:h-[120px] object-cover object-center block mx-auto transition duration-300 group-hover:opacity-95" />
+        </a>
+        <span class="absolute top-1.5 right-1.5 bg-black/60 text-white text-[8px] font-bold px-1.5 py-0.5 uppercase tracking-wider rounded-xs pointer-events-none">Quảng cáo</span>
+      </div>
+    </div>
+  </aside>
 
   <!-- ========================================================================= -->
-  <!-- 1. TOP HEADER WITH USER'S LOGO.PNG & BRAND TEXT (CHUẨN ẢNH 2)             -->
+  <!-- 1. TOP HEADER WITH LOGO & UTILITIES (CHUẨN ẢNH MẪU 1)                      -->
   <!-- ========================================================================= -->
   <header class="bg-white border-b border-slate-200">
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 py-2.5 flex items-center justify-between">
       
       <!-- LOGO + TEXT TRUYỀN HÌNH CÔNG THƯƠNG -->
       <a href="index.html" class="flex items-center gap-3 sm:gap-4 group">
-        <img src="logo.png" alt="Công Thương TV" class="h-12 sm:h-14 md:h-16 w-auto object-contain flex-shrink-0" />
+        <img src="logo.png" alt="Công Thương TV" class="h-10 sm:h-12 md:h-14 w-auto object-contain flex-shrink-0" />
         <div class="flex flex-col justify-center">
-          <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-500">BỘ CÔNG THƯƠNG VIỆT NAM</span>
-          <span class="text-base sm:text-xl md:text-2xl font-black text-[#004B87] uppercase tracking-tight leading-tight group-hover:text-red-700 transition-colors">
-            TRUNG TÂM TRUYỀN THÔNG · TRUYỀN HÌNH CÔNG THƯƠNG
+          <span class="text-base sm:text-xl md:text-2xl font-black text-brand-red uppercase tracking-tight leading-none group-hover:text-red-700 transition-colors">
+            TRUYỀN HÌNH CÔNG THƯƠNG
           </span>
-          <span class="text-[10px] sm:text-xs text-slate-500 font-semibold tracking-wide hidden sm:block">
-            Cơ quan ngôn luận của Bộ Công Thương · Tiếng nói của ngành Công nghiệp & Thương mại
+          <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-brand-blue mt-1">
+            TRUNG TÂM TRUYỀN THÔNG - TRUYỀN HÌNH CÔNG THƯƠNG
           </span>
         </div>
       </a>
 
-      <!-- HOTLINE BÊN PHẢI -->
-      <div class="hidden lg:flex flex-col items-end text-xs text-slate-600 font-sans">
-        <div class="flex items-center gap-2 text-slate-700 font-semibold">
-          <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
-          Hotline: <strong class="text-red-700 text-sm font-bold font-mono">024.3934.2228</strong>
-        </div>
+      <!-- CÁNH PHẢI: YOUTUBE, FACEBOOK, QUẢNG CÁO, SEARCH, USER, ĐĂNG KÝ BẢN TIN -->
+      <div class="hidden lg:flex items-center gap-4 text-xs text-slate-700 font-sans font-semibold">
+        <a href="https://youtube.com/@truyenhinhcongthuong" target="_blank" rel="noopener" class="flex items-center gap-1.5 text-slate-700 hover:text-red-600 transition" title="YouTube Truyền hình Công Thương">
+          <span class="w-5 h-5 rounded-full bg-red-600 text-white flex items-center justify-center">
+            <svg class="w-3 h-3 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M10 15l5-3-5-3v6z"/></svg>
+          </span>
+          <span class="font-bold">YouTube</span>
+        </a>
+
+        <a href="https://facebook.com/truyenhinhcongthuong" target="_blank" rel="noopener" class="flex items-center gap-1.5 text-slate-700 hover:text-blue-600 transition" title="Facebook Truyền hình Công Thương">
+          <span class="w-5 h-5 rounded-full bg-[#1877F2] text-white flex items-center justify-center">
+            <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </span>
+          <span class="font-bold">Facebook</span>
+        </a>
+
+        <a href="tel:02439342228" class="flex items-center gap-1.5 text-slate-700 hover:text-brand-red transition" title="Hotline quảng cáo: 024.3934.2228">
+          <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
+          <span class="font-bold">Quảng cáo</span>
+        </a>
+
+        <button onclick="document.getElementById('search-modal') && document.getElementById('search-modal').classList.remove('hidden')" class="p-1.5 text-slate-600 hover:text-black transition" aria-label="Tìm kiếm bài viết">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </button>
+
+        <a href="tel:02439342228" class="p-1.5 text-slate-600 hover:text-black transition" aria-label="Tài khoản">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        </a>
+
+        <a href="#newsletter" class="px-3.5 py-1.5 rounded-md bg-[#1A73E8] hover:bg-blue-700 text-white font-bold text-xs tracking-wide transition shadow-sm">
+          Đăng ký Bản tin
+        </a>
       </div>
 
     </div>
 
-    <!-- ======================================================================= -->
-    <!-- 2. SOLID RED NAVBAR (CHÍNH XÁC NHƯ ẢNH 2 CỦA USER)                      -->
-    <!-- ======================================================================= -->
     <nav class="bg-[#B91C1C] text-white shadow-md sticky top-0 z-40" aria-label="Menu chính">
       <div class="max-w-[1440px] mx-auto px-4 sm:px-6 flex items-center justify-between">
         
-        <ul class="flex items-center overflow-x-auto whitespace-nowrap text-xs font-bold uppercase tracking-wider py-0 no-scrollbar">
+        <button id="mobile-menu-toggle" class="lg:hidden p-2.5 text-white hover:bg-red-800 transition-colors" aria-label="Menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+
+        <ul class="flex items-center overflow-visible text-xs font-bold uppercase tracking-wider py-0">
           <li class="flex-shrink-0">
             <a href="index.html" class="flex items-center px-3.5 py-3 hover:bg-red-800 text-white transition-colors" title="Trang chủ">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
             </a>
           </li>
           <li class="text-white/40 font-light select-none px-1">|</li>
-          <li class="flex-shrink-0"><a href="category.html?cat=thoi-su" class="px-2.5 py-3 inline-block hover:bg-red-800 transition-colors">TIN TỨC</a></li>
+          
+          <li class="flex-shrink-0 nav-item-dropdown">
+            <a href="category.html?cat=thoi-su" class="px-2.5 py-3 inline-flex items-center gap-1 hover:bg-red-800 transition-colors">
+              <span>TIN TỨC</span>
+              <svg class="w-2.5 h-2.5 opacity-70" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+            </a>
+            <div class="nav-dropdown-content">
+              <a href="category.html?cat=thoi-su">Thời sự trong ngày</a>
+              <a href="category.html?cat=thoi-su">Chính sách & Pháp luật</a>
+              <a href="category.html?cat=thoi-su">Kinh tế vĩ mô</a>
+              <a href="category.html?cat=thoi-su">Hoạt động Bộ Công Thương</a>
+            </div>
+          </li>
           <li class="text-white/40 font-light select-none px-1">|</li>
-          <li class="flex-shrink-0"><a href="category.html?cat=cong-nghiep" class="px-2.5 py-3 inline-block hover:bg-red-800 transition-colors">CÔNG NGHIỆP</a></li>
+
+          <li class="flex-shrink-0 nav-item-dropdown">
+            <a href="category.html?cat=cong-nghiep" class="px-2.5 py-3 inline-flex items-center gap-1 hover:bg-red-800 transition-colors">
+              <span>CÔNG NGHIỆP</span>
+              <svg class="w-2.5 h-2.5 opacity-70" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+            </a>
+            <div class="nav-dropdown-content">
+              <a href="category.html?cat=cong-nghiep">Năng lượng & Điện lực</a>
+              <a href="category.html?cat=cong-nghiep">Dầu khí & Xăng dầu</a>
+              <a href="category.html?cat=cong-nghiep">Công nghiệp chế biến</a>
+              <a href="category.html?cat=cong-nghiep">Than & Khoáng sản</a>
+            </div>
+          </li>
           <li class="text-white/40 font-light select-none px-1">|</li>
-          <li class="flex-shrink-0"><a href="category.html?cat=thuong-mai" class="px-2.5 py-3 inline-block hover:bg-red-800 transition-colors">THƯƠNG MẠI</a></li>
+
+          <li class="flex-shrink-0 nav-item-dropdown">
+            <a href="category.html?cat=thuong-mai" class="px-2.5 py-3 inline-flex items-center gap-1 hover:bg-red-800 transition-colors">
+              <span>THƯƠNG MẠI</span>
+              <svg class="w-2.5 h-2.5 opacity-70" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+            </a>
+            <div class="nav-dropdown-content">
+              <a href="category.html?cat=thuong-mai">Xuất nhập khẩu</a>
+              <a href="category.html?cat=thuong-mai">Thị trường nội địa</a>
+              <a href="category.html?cat=thuong-mai">Quản lý thị trường</a>
+              <a href="category.html?cat=thuong-mai">Xúc tiến thương mại</a>
+            </div>
+          </li>
           <li class="text-white/40 font-light select-none px-1">|</li>
-          <li class="flex-shrink-0"><a href="category.html?cat=hoi-nhap" class="px-2.5 py-3 inline-block hover:bg-red-800 transition-colors">HỘI NHẬP</a></li>
+
+          <li class="flex-shrink-0 nav-item-dropdown">
+            <a href="category.html?cat=hoi-nhap" class="px-2.5 py-3 inline-flex items-center gap-1 hover:bg-red-800 transition-colors">
+              <span>HỘI NHẬP</span>
+              <svg class="w-2.5 h-2.5 opacity-70" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+            </a>
+            <div class="nav-dropdown-content">
+              <a href="category.html?cat=hoi-nhap">Hiệp định EVFTA</a>
+              <a href="category.html?cat=hoi-nhap">Hiệp định CPTPP</a>
+              <a href="category.html?cat=hoi-nhap">AEC & RCEP</a>
+              <a href="category.html?cat=hoi-nhap">WTO & Hội nhập quốc tế</a>
+            </div>
+          </li>
           <li class="text-white/40 font-light select-none px-1">|</li>
+
           <li class="flex-shrink-0"><a href="category.html?cat=thuong-hieu" class="px-2.5 py-3 inline-block hover:bg-red-800 transition-colors">THƯƠNG HIỆU</a></li>
           <li class="text-white/40 font-light select-none px-1">|</li>
           <li class="flex-shrink-0"><a href="category.html?cat=chuyen-doi-so" class="px-2.5 py-3 inline-block hover:bg-red-800 transition-colors">KHOA HỌC CÔNG NGHỆ</a></li>
@@ -102,9 +187,9 @@
           <li class="text-white/40 font-light select-none px-1">|</li>
           <li class="flex-shrink-0"><a href="category.html?cat=van-hoa-cong-thuong" class="px-2.5 py-3 inline-block hover:bg-red-800 transition-colors">VĂN HÓA CÔNG THƯƠNG</a></li>
           <li class="text-white/40 font-light select-none px-1">|</li>
-          <li class="flex-shrink-0"><a href="video.html" class="px-2.5 py-3 inline-block hover:bg-red-800 transition-colors font-black">VIDEO</a></li>
+          <li class="flex-shrink-0"><a href="video.html" class="px-2.5 py-3 inline-block hover:bg-red-800 transition-colors font-black text-amber-300">VIDEO</a></li>
           <li class="text-white/40 font-light select-none px-1">|</li>
-          <li class="flex-shrink-0"><a href="category.html?cat=tap-chi-anh" class="px-2.5 py-3 inline-block hover:bg-red-800 transition-colors">TẠP CHÍ ẢNH</a></li>
+          <li class="flex-shrink-0"><a href="photo-story.html" class="px-2.5 py-3 inline-block hover:bg-red-800 transition-colors text-amber-200">TẠP CHÍ ẢNH</a></li>
         </ul>
 
         <button id="open-search-btn" class="p-2.5 hover:bg-red-800 text-white transition-colors flex-shrink-0" aria-label="Tìm kiếm bài viết">
@@ -115,142 +200,309 @@
     </nav>
   </header>
 
-  <!-- MAIN ARTICLE CONTAINER -->
-  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-    
-    <!-- BREADCRUMB -->
-    <nav class="flex items-center gap-2 text-xs font-semibold text-slate-400 mb-6 uppercase tracking-wider" aria-label="Đường dẫn">
-      <a href="index.html" class="hover:text-slate-700">Trang chủ</a>
-      <span>/</span>
-      <span id="article-cat-breadcrumb" class="text-brand-blue font-bold">Chuyên mục</span>
-      <span>/</span>
-      <span class="text-slate-600 truncate max-w-xs">Chi tiết bài viết</span>
-    </nav>
+  <!-- ========================================================================= -->
+  <!-- SITE LAYOUT WITH SIDE GUTTER BANNERS (2 BÊN NGOÀI VIỀN TRỐNG - HỌP 02/10) -->
+  <!-- ========================================================================= -->
+  <div class="site-layout-with-gutters">
 
-    <!-- ARTICLE HEADER -->
-    <header class="mb-8">
-      <!-- Tag Kicker -->
-      <span id="article-kicker" class="px-2.5 py-1 bg-red-100 text-brand-red text-xs font-extrabold uppercase tracking-widest rounded mb-3 inline-block">
-        TIÊU ĐIỂM · NĂNG LƯỢNG QUỐC GIA
-      </span>
+    <!-- CÁNH TRÁI: BANNER QUẢNG CÁO TRƯỢT 2 BÊN NGOÀI -->
+    <aside class="side-gutter-ad left-gutter" aria-label="Quảng cáo cánh trái">
+      <div class="ad-banner-card">
+        <span class="block text-[8px] text-slate-400 font-bold uppercase tracking-wider mb-1">Quảng cáo</span>
+        <a href="https://moit.gov.vn" target="_blank" rel="noopener">
+          <img src="assets/images/category-ad-vn-eu.jpg" alt="Hiệp định EVFTA - Cổng FTAs Bộ Công Thương" />
+        </a>
+        <span class="block text-[10px] font-bold text-slate-800 bg-slate-50 p-1 mt-1">Cổng FTAs Bộ Công Thương</span>
+      </div>
+      <div class="ad-banner-card">
+        <span class="block text-[8px] text-slate-400 font-bold uppercase tracking-wider mb-1">Quảng cáo</span>
+        <a href="https://congthuong.vn" target="_blank" rel="noopener">
+          <img src="assets/images/category-ad-vietnamese-goods.jpg" alt="Tự hào hàng Việt Nam" />
+        </a>
+        <span class="block text-[10px] font-bold text-slate-800 bg-slate-50 p-1 mt-1">Tự Hào Hàng Việt</span>
+      </div>
+    </aside>
 
-      <!-- Tiêu đề bài viết H1 font-editorial lớn phong cách Wired -->
-      <h1 id="article-title" class="font-editorial text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-black text-slate-900 leading-tight mb-6">
-        Đang tải bài viết...
-      </h1>
+    <!-- KHỐI ĐỌC BÀI CHÍNH (ARTICLE CONTAINER) -->
+    <div class="site-main-content-wrapper">
+      <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+        
+        <!-- BREADCRUMB -->
+        <nav class="flex items-center gap-2 text-xs font-semibold text-slate-400 mb-6 uppercase tracking-wider" aria-label="Đường dẫn">
+          <a href="index.html" class="hover:text-slate-700">Trang chủ</a>
+          <span>/</span>
+          <span id="article-cat-breadcrumb" class="text-brand-blue font-bold">Chuyên mục</span>
+          <span>/</span>
+          <span class="text-slate-600 truncate max-w-xs">Chi tiết bài viết</span>
+        </nav>
 
-      <!-- Byline & Metadata Bar -->
-      <div class="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-slate-200 text-xs text-slate-500 font-semibold">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-brand-blue text-white flex items-center justify-center font-bold text-xs uppercase">
-            TC
+        <!-- ARTICLE HEADER -->
+        <header class="mb-8">
+          <!-- Tag Kicker -->
+          <span id="article-kicker" class="px-2.5 py-1 bg-red-100 text-brand-red text-xs font-extrabold uppercase tracking-widest rounded mb-3 inline-block">
+            TIÊU ĐIỂM · NĂNG LƯỢNG QUỐC GIA
+          </span>
+
+          <!-- Tiêu đề bài viết H1 font-editorial lớn phong cách Wired -->
+          <h1 id="article-title" class="font-editorial text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-black text-slate-900 leading-tight mb-6">
+            Đang tải bài viết...
+          </h1>
+
+          <!-- Byline & Metadata Bar & READING / SOCIAL TOOLBAR -->
+          <div class="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-slate-200 text-xs text-slate-500 font-semibold">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-brand-blue text-white flex items-center justify-center font-bold text-xs uppercase">
+                TC
+              </div>
+              <div>
+                <span id="article-author" class="block font-bold text-slate-900 uppercase">BAN BIÊN TẬP</span>
+                <span id="article-time" class="text-slate-400">05/10/2026 18:30 GMT+7</span>
+              </div>
+            </div>
+
+            <!-- READING & SOCIAL SHARE TOOLBAR (HỌP 02/10 MỤC 8) -->
+            <div class="flex flex-wrap items-center gap-2">
+              
+              <!-- Nút Chia sẻ Facebook (Popup chuẩn) -->
+              <button id="share-facebook-btn" class="px-3 py-1.5 rounded-lg bg-[#1877f2] hover:bg-blue-700 text-white flex items-center gap-1.5 transition-colors font-bold text-xs shadow-xs" title="Chia sẻ lên Facebook">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                <span>Chia sẻ</span>
+              </button>
+
+              <!-- Nút Chia sẻ Zalo -->
+              <button id="share-zalo-btn" class="px-2.5 py-1.5 rounded-lg bg-[#0068ff] hover:bg-blue-600 text-white flex items-center gap-1 transition-colors font-bold text-xs shadow-xs" title="Chia sẻ qua Zalo">
+                <span>Zalo</span>
+              </button>
+
+              <!-- Phóng to / Thu nhỏ cỡ chữ -->
+              <div class="flex items-center bg-slate-100 rounded-lg p-0.5 border border-slate-200">
+                <button id="zoom-out-btn" class="px-2 py-1 text-xs font-bold text-slate-700 hover:text-brand-red" title="Thu nhỏ cỡ chữ">A-</button>
+                <div class="h-3 w-[1px] bg-slate-300"></div>
+                <button id="zoom-in-btn" class="px-2 py-1 text-xs font-bold text-slate-700 hover:text-brand-red" title="Phóng to cỡ chữ">A+</button>
+              </div>
+
+              <!-- Nút Copy Link -->
+              <button id="copy-link-btn" class="px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center gap-1 transition-colors text-xs" title="Sao chép liên kết bài viết">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                <span class="hidden sm:inline">Copy link</span>
+              </button>
+
+              <!-- Nút In bài viết -->
+              <button id="print-article-btn" class="p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" title="In bài viết">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+              </button>
+
+            </div>
           </div>
-          <div>
-            <span id="article-author" class="block font-bold text-slate-900 uppercase">BAN BIÊN TẬP</span>
-            <span id="article-time" class="text-slate-400">05/10/2026 18:30 GMT+7</span>
+        </header>
+
+        <!-- ARTICLE HERO IMAGE -->
+        <div class="mb-8">
+          <div class="rounded-xl overflow-hidden aspect-video thumb-16-9 bg-slate-100 shadow-md">
+            <img id="article-image" src="" alt="Ảnh bài viết" class="w-full h-full object-cover" />
+          </div>
+          <p id="article-image-caption" class="text-xs text-slate-500 italic mt-2 text-center"></p>
+        </div>
+
+        <!-- ARTICLE RICH TEXT CONTENT -->
+        <article id="article-content" class="text-slate-800 text-lg leading-relaxed space-y-6">
+          <!-- Nội dung được nạp qua detail.js -->
+        </article>
+
+        <!-- BANNER QUẢNG CÁO CUỐI BÀI VIẾT (IN-ARTICLE AD) -->
+        <div class="in-feed-ad-banner my-8">
+          <div class="flex items-center justify-between pb-1.5 mb-1 border-b border-slate-200">
+            <span class="text-[9px] uppercase font-bold text-slate-500 tracking-wider">CHƯƠNG TRÌNH THƯƠNG HIỆU QUỐC GIA VIỆT NAM</span>
+            <span class="text-[9px] uppercase font-bold text-slate-400 font-mono">QUẢNG CÁO</span>
+          </div>
+          <a href="https://congthuong.vn" target="_blank" rel="noopener" class="block overflow-hidden rounded group">
+            <img src="assets/images/category-ad-brand.jpg" alt="Thương hiệu Quốc gia" class="w-full h-auto max-h-[140px] object-cover group-hover:opacity-95 transition-opacity" />
+          </a>
+        </div>
+
+        <!-- WIDGET LIÊN KẾT MẠNG XÃ HỘI BÀI VIẾT (YÊU CẦU 1 HỌP 02/10) -->
+        <div class="my-8 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-red-50 border border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center flex-shrink-0 shadow">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Xem và thảo luận bản tin này trên mạng xã hội</h4>
+              <p class="text-xs text-slate-600">Độc giả có thể bình luận trực tiếp và tương tác cùng cộng đồng trên kênh chính thức</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 flex-shrink-0">
+            <a href="https://facebook.com/truyenhinhcongthuong" target="_blank" rel="noopener" class="px-3 py-1.5 bg-[#1877f2] hover:bg-blue-800 text-white text-xs font-bold rounded-lg transition shadow-xs">
+              Fanpage Facebook
+            </a>
+            <a href="https://youtube.com/@truyenhinhcongthuong" target="_blank" rel="noopener" class="px-3 py-1.5 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-lg transition shadow-xs">
+              Kênh YouTube
+            </a>
           </div>
         </div>
 
-        <!-- READING TOOLBAR (WIRED UTILITY) -->
-        <div class="flex items-center gap-2">
-          <!-- Phóng to / Thu nhỏ cỡ chữ -->
-          <div class="flex items-center bg-slate-100 rounded-lg p-0.5 border border-slate-200">
-            <button id="zoom-out-btn" class="px-2.5 py-1 text-xs font-bold text-slate-700 hover:text-brand-red" title="Thu nhỏ cỡ chữ">A-</button>
-            <div class="h-3 w-[1px] bg-slate-300"></div>
-            <button id="zoom-in-btn" class="px-2.5 py-1 text-xs font-bold text-slate-700 hover:text-brand-red" title="Phóng to cỡ chữ">A+</button>
+        <!-- TAGS CLOUD (CÓ SỰ KIỆN CLICK LỌC TÌM KIẾM) -->
+        <div class="my-8 pt-6 border-t border-slate-200">
+          <h3 class="text-xs uppercase font-extrabold tracking-wider text-slate-400 mb-3">TỪ KHÓA BÀI VIẾT:</h3>
+          <div class="flex flex-wrap gap-2 text-xs font-semibold">
+            <span onclick="window.location.href='category.html?cat=cong-nghiep'" class="px-3 py-1 bg-slate-100 hover:bg-brand-red hover:text-white rounded-full text-slate-700 cursor-pointer transition-colors">#BộCôngThương</span>
+            <span onclick="window.location.href='category.html?cat=cong-nghiep'" class="px-3 py-1 bg-slate-100 hover:bg-brand-blue hover:text-white rounded-full text-slate-700 cursor-pointer transition-colors">#QuyHoạchĐiệnVIII</span>
+            <span onclick="window.location.href='category.html?cat=chuyen-doi-so'" class="px-3 py-1 bg-slate-100 hover:bg-brand-red hover:text-white rounded-full text-slate-700 cursor-pointer transition-colors">#NăngLượngXanh</span>
+            <span onclick="window.location.href='category.html?cat=chuyen-doi-so'" class="px-3 py-1 bg-slate-100 hover:bg-brand-blue hover:text-white rounded-full text-slate-700 cursor-pointer transition-colors">#ChuyểnĐổiSố</span>
+            <span onclick="window.location.href='category.html?cat=hoi-nhap'" class="px-3 py-1 bg-slate-100 hover:bg-brand-red hover:text-white rounded-full text-slate-700 cursor-pointer transition-colors">#NetZero2050</span>
+          </div>
+        </div>
+
+        <!-- =================================================================== -->
+        <!-- TOP 10 BÀI VIẾT LIÊN QUAN (THEO THUYẾT MINH MỤC 25 & HỌP 02/10 MỤC 9) -->
+        <!-- =================================================================== -->
+        <section class="my-12 pt-8 border-t-2 border-slate-900">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 bg-red-600 rounded-full animate-pulse"></span>
+              <h2 class="font-editorial text-xl font-bold uppercase text-slate-900">TOP 10 BÀI VIẾT LIÊN QUAN & CÙNG CHUYÊN MỤC</h2>
+            </div>
+            <span class="text-xs font-bold text-brand-red">TIN MỚI CẬP NHẬT</span>
           </div>
 
-          <!-- Nút Copy Link -->
-          <button id="copy-link-btn" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center gap-1.5 transition-colors" title="Sao chép liên kết">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-            <span>Sao chép link</span>
-          </button>
+          <!-- 4 Bài liên quan dạng Card ảnh lớn -->
+          <div id="related-articles-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-6">
+            <!-- Render bởi detail.js -->
+          </div>
 
-          <!-- Nút In bài viết -->
-          <button id="print-article-btn" class="p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" title="In bài viết">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
-          </button>
+          <!-- 6 Bài liên quan tiếp theo dạng Danh sách Timeline gọn gàng (Đủ Top 10) -->
+          <div class="bg-white p-4 rounded-xl border border-slate-200">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2 border-b border-slate-100 pb-2">
+              Tin tức liên quan khác trong chuyên mục:
+            </h4>
+            <div id="related-articles-compact-list" class="space-y-1">
+              <!-- Render bởi detail.js -->
+            </div>
+          </div>
+        </section>
+
+        <!-- BANNER QUẢNG CÁO SẢN PHẨM VIỆT NAM -->
+        <div class="in-feed-ad-banner my-10">
+          <div class="flex items-center justify-between pb-1.5 mb-1 border-b border-slate-200">
+            <span class="text-[9px] uppercase font-bold text-slate-500 tracking-wider">CHƯƠNG TRÌNH NHẬN DIỆN HÀNG VIỆT NAM</span>
+            <span class="text-[9px] uppercase font-bold text-slate-400 font-mono">QUẢNG CÁO</span>
+          </div>
+          <a href="https://congthuong.vn" target="_blank" rel="noopener" class="block overflow-hidden rounded group">
+            <img src="assets/images/category-ad-vietnamese-goods.jpg" alt="Tự hào hàng Việt Nam" class="w-full h-auto max-h-[140px] object-cover group-hover:opacity-95 transition-opacity" />
+          </a>
         </div>
-      </div>
-    </header>
 
-    <!-- ARTICLE HERO IMAGE -->
-    <div class="mb-8">
-      <div class="rounded-xl overflow-hidden aspect-[16/9] bg-slate-100 shadow-md">
-        <img id="article-image" src="" alt="Ảnh bài viết" class="w-full h-full object-cover" />
-      </div>
-      <p id="article-image-caption" class="text-xs text-slate-500 italic mt-2 text-center"></p>
+        <!-- =================================================================== -->
+        <!-- KHUNG BÌNH LUẬN ĐỘC GIẢ (CÓ BỘ LỌC TỪ CẤM - HỌP 02/10 MỤC 10)      -->
+        <!-- =================================================================== -->
+        <section class="my-12 p-6 sm:p-8 rounded-xl bg-white border border-slate-200 shadow-sm">
+          
+          <div class="flex flex-wrap items-center justify-between mb-6 pb-4 border-b border-slate-100 gap-3">
+            <div>
+              <h3 class="font-editorial text-xl font-bold text-slate-900 flex items-center gap-2">
+                Ý KIẾN ĐỘC GIẢ <span id="comment-count" class="text-brand-red font-mono text-base">(2)</span>
+              </h3>
+              <p class="text-xs text-slate-400 mt-0.5">Hệ thống tự động kiểm duyệt ngôn luận theo chuẩn mực báo chí</p>
+            </div>
+
+            <!-- Trạng thái bình luận & reCAPTCHA badge -->
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold border border-emerald-200">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Bình luận: Đang mở
+              </span>
+              <span class="hidden sm:inline-block text-[10px] text-slate-400 bg-slate-100 px-2 py-1 rounded">
+                🛡️ Chống Spam reCAPTCHA v3
+              </span>
+            </div>
+          </div>
+
+          <!-- Alert cảnh báo từ cấm nhạy cảm (Họp 02/10 mục 10) -->
+          <div id="comment-alert" class="hidden mb-4 p-3 rounded-lg bg-red-50 border border-red-200 text-xs text-red-700 leading-relaxed">
+            <!-- Nội dung cảnh báo nạp qua JS -->
+          </div>
+
+          <!-- Form nhập bình luận -->
+          <form id="comment-form" class="space-y-4 mb-8">
+            <div>
+              <label for="comment-name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Họ và tên của bạn:</label>
+              <input id="comment-name" type="text" required placeholder="Ví dụ: Nguyễn Văn A..." class="w-full px-4 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:border-brand-red" />
+            </div>
+            <div>
+              <label for="comment-text" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Ý kiến đóng góp:</label>
+              <textarea id="comment-text" rows="3" required placeholder="Chia sẻ góc nhìn của bạn về vấn đề này (Tuân thủ chuẩn mực văn hóa phát ngôn)..." class="w-full px-4 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:border-brand-red"></textarea>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] text-slate-400 italic">Mẹo thử nghiệm: Thử gõ các từ như "lừa đảo", "chửi thề" để kiểm tra tính năng chặn từ cấm tự động.</span>
+              <button type="submit" class="px-5 py-2.5 rounded-lg bg-brand-red hover:bg-brand-red-dark text-white text-xs font-bold uppercase tracking-wider transition-colors shadow">
+                Gửi Bình Luận
+              </button>
+            </div>
+          </form>
+
+          <!-- Danh sách bình luận -->
+          <div id="comment-list" class="space-y-4">
+            <!-- Render bởi detail.js -->
+          </div>
+        </section>
+
+      </main>
     </div>
 
-    <!-- ARTICLE RICH TEXT CONTENT -->
-    <article id="article-content" class="text-slate-800 text-lg leading-relaxed space-y-6">
-      <!-- Nội dung được nạp qua detail.js -->
-    </article>
-
-    <!-- TAGS CLOUD -->
-    <div class="my-10 pt-6 border-t border-slate-200">
-      <h3 class="text-xs uppercase font-extrabold tracking-wider text-slate-400 mb-3">TỪ KHÓA BÀI VIẾT:</h3>
-      <div class="flex flex-wrap gap-2 text-xs font-semibold">
-        <span class="px-3 py-1 bg-slate-100 hover:bg-brand-red hover:text-white rounded-full text-slate-700 cursor-pointer transition-colors">#BộCôngThương</span>
-        <span class="px-3 py-1 bg-slate-100 hover:bg-brand-blue hover:text-white rounded-full text-slate-700 cursor-pointer transition-colors">#QuyHoạchĐiệnVIII</span>
-        <span class="px-3 py-1 bg-slate-100 hover:bg-brand-red hover:text-white rounded-full text-slate-700 cursor-pointer transition-colors">#NăngLượngXanh</span>
-        <span class="px-3 py-1 bg-slate-100 hover:bg-brand-blue hover:text-white rounded-full text-slate-700 cursor-pointer transition-colors">#ChuyểnĐổiSố</span>
-        <span class="px-3 py-1 bg-slate-100 hover:bg-brand-red hover:text-white rounded-full text-slate-700 cursor-pointer transition-colors">#NetZero2050</span>
+    <!-- CÁNH PHẢI: BANNER QUẢNG CÁO TRƯỢT 2 BÊN NGOÀI -->
+    <aside class="side-gutter-ad right-gutter" aria-label="Quảng cáo cánh phải">
+      <div class="ad-banner-card">
+        <span class="block text-[8px] text-slate-400 font-bold uppercase tracking-wider mb-1">Quảng cáo</span>
+        <a href="https://vietrade.gov.vn" target="_blank" rel="noopener">
+          <img src="assets/images/category-ad-brand.jpg" alt="Thương hiệu Quốc gia Việt Nam" />
+        </a>
+        <span class="block text-[10px] font-bold text-slate-800 bg-slate-50 p-1 mt-1">Thương Hiệu Quốc Gia</span>
       </div>
-    </div>
-
-    <!-- BÀI VIẾT LIÊN QUAN -->
-    <section class="my-12 pt-8 border-t-2 border-slate-900">
-      <div class="flex items-center justify-between mb-6">
-        <h2 class="font-editorial text-xl font-bold uppercase text-slate-900">BÀI VIẾT CÙNG CHUYÊN MỤC</h2>
-        <span class="text-xs font-bold text-brand-red">TIN MỚI CẬP NHẬT</span>
+      <div class="ad-banner-card">
+        <span class="block text-[8px] text-slate-400 font-bold uppercase tracking-wider mb-1">Quảng cáo</span>
+        <a href="https://vietrade.gov.vn" target="_blank" rel="noopener">
+          <img src="assets/images/category-ad-cbi.jpg" alt="Xúc tiến xuất khẩu CBI" />
+        </a>
+        <span class="block text-[10px] font-bold text-slate-800 bg-slate-50 p-1 mt-1">Xúc Tiến Xuất Khẩu CBI</span>
       </div>
-      <div id="related-articles-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Render bởi detail.js -->
-      </div>
-    </section>
+    </aside>
 
-    <!-- KHUNG BÌNH LUẬN ĐỘC GIẢ (MOCKUP INTERACTIVE) -->
-    <section class="my-12 p-6 sm:p-8 rounded-xl bg-white border border-slate-200 shadow-sm">
-      <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-100">
-        <h3 class="font-editorial text-xl font-bold text-slate-900 flex items-center gap-2">
-          Ý KIẾN ĐỘC GIẢ <span id="comment-count" class="text-brand-red font-mono text-base">(2)</span>
-        </h3>
-        <span class="text-xs text-slate-400">Tuân thủ chuẩn mực văn minh ngôn luận</span>
-      </div>
-
-      <!-- Form nhập bình luận -->
-      <form id="comment-form" class="space-y-4 mb-8">
-        <div>
-          <label for="comment-name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Họ và tên của bạn:</label>
-          <input id="comment-name" type="text" required placeholder="Ví dụ: Nguyễn Văn A..." class="w-full px-4 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:border-brand-red" />
-        </div>
-        <div>
-          <label for="comment-text" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Ý kiến đóng góp:</label>
-          <textarea id="comment-text" rows="3" required placeholder="Chia sẻ góc nhìn của bạn về vấn đề này..." class="w-full px-4 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:border-brand-red"></textarea>
-        </div>
-        <div class="flex justify-end">
-          <button type="submit" class="px-5 py-2.5 rounded-lg bg-brand-red hover:bg-brand-red-dark text-white text-xs font-bold uppercase tracking-wider transition-colors shadow">
-            Gửi Bình Luận
-          </button>
-        </div>
-      </form>
-
-      <!-- Danh sách bình luận -->
-      <div id="comment-list" class="space-y-4">
-        <!-- Render bởi detail.js -->
-      </div>
-    </section>
-
-  </main>
+  </div>
 
   <!-- FOOTER -->
-  <footer class="bg-brand-navy text-slate-400 text-xs border-t-4 border-brand-red py-8">
+  <footer class="bg-brand-navy text-slate-400 text-xs border-t-4 border-brand-red py-10 mt-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-      <p class="text-white font-bold mb-1">TRUYỀN HÌNH CÔNG THƯƠNG — BỘ CÔNG THƯƠNG VIỆT NAM</p>
-      <p>© 2026 Bản quyền thuộc về Truyền Hình Công Thương. Giấy phép số 148/GP-BTTTT.</p>
+      <p class="text-white font-bold mb-1 text-sm">TRUYỀN HÌNH CÔNG THƯƠNG — BỘ CÔNG THƯƠNG VIỆT NAM</p>
+      <p>Cơ quan ngôn luận của Bộ Công Thương · Giấy phép hoạt động báo chí điện tử số 148/GP-BTTTT.</p>
+      <p class="mt-1 text-slate-500">© 2026 Bản quyền thuộc về Truyền Hình Công Thương. Ghi rõ nguồn khi trích dẫn.</p>
     </div>
   </footer>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 pointer-events-none opacity-0" aria-label="Menu di động">
+    <div class="drawer-backdrop" onclick="window.closeMobileDrawer ? window.closeMobileDrawer() : null"></div>
+    <div class="drawer-content">
+      <div class="p-4 bg-[#B91C1C] text-white flex items-center justify-between shadow">
+        <div class="flex items-center gap-2.5">
+          <img src="logo.png" alt="Logo" class="h-8 w-auto bg-white p-0.5 rounded" />
+          <div class="leading-none">
+            <span class="block text-xs font-black uppercase">Truyền Hình Công Thương</span>
+            <span class="text-[9px] text-white/80 uppercase">Bộ Công Thương</span>
+          </div>
+        </div>
+        <button id="close-mobile-drawer" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-white text-xl leading-none">&times;</button>
+      </div>
+      <div class="flex-1 overflow-y-auto p-4 space-y-1 text-xs font-bold text-slate-800">
+        <a href="index.html" class="block px-3 py-2 rounded hover:bg-slate-100 uppercase">TRANG CHỦ</a>
+        <a href="category.html?cat=thoi-su" class="block px-3 py-2 rounded hover:bg-slate-100 uppercase">TIN TỨC THỜI SỰ</a>
+        <a href="category.html?cat=cong-nghiep" class="block px-3 py-2 rounded hover:bg-slate-100 uppercase">CÔNG NGHIỆP & NĂNG LƯỢNG</a>
+        <a href="category.html?cat=thuong-mai" class="block px-3 py-2 rounded hover:bg-slate-100 uppercase">THƯƠNG MẠI & XUẤT NHẬP KHẨU</a>
+        <a href="category.html?cat=hoi-nhap" class="block px-3 py-2 rounded hover:bg-slate-100 uppercase">HỘI NHẬP FTAS</a>
+        <a href="video.html" class="block px-3 py-2 rounded hover:bg-red-50 text-red-700 uppercase font-black">▶ KÊNH VIDEO PHÓNG SỰ</a>
+        <a href="photo-story.html" class="block px-3 py-2 rounded hover:bg-amber-50 text-amber-700 uppercase font-black">📷 TẠP CHÍ ẢNH PHÓNG SỰ</a>
+      </div>
+    </div>
+  </div>
 
   <!-- Search Modal -->
   <div id="search-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-start justify-center pt-20 px-4">

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 110" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a2540" />
+      <stop offset="35%" stop-color="#0f3a69" />
+      <stop offset="70%" stop-color="#0b5394" />
+      <stop offset="100%" stop-color="#006699" />
+    </linearGradient>
+
+    <!-- Accent Golden Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffd166" />
+      <stop offset="50%" stop-color="#ffb703" />
+      <stop offset="100%" stop-color="#fb8500" />
+    </linearGradient>
+
+    <!-- Red/Orange Glow Gradient -->
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#be1016" />
+      <stop offset="100%" stop-color="#e63946" />
+    </linearGradient>
+
+    <filter id="shadowFilter" x="-5%" y="-10%" width="110%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Banner Background -->
+  <rect width="1160" height="110" fill="url(#bgGrad)" />
+
+  <!-- Decorative Modern Geometry -->
+  <g opacity="0.12">
+    <circle cx="1120" cy="55" r="140" fill="#ffffff" />
+    <circle cx="1080" cy="55" r="100" fill="#ffd166" />
+    <polygon points="0,0 220,0 140,110 0,110" fill="#ffffff" />
+    <polygon points="880,0 950,0 910,110 840,110" fill="#ffffff" />
+  </g>
+
+  <!-- Modern Tech Grid Lines -->
+  <line x1="160" y1="0" x2="280" y2="110" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+  <line x1="200" y1="0" x2="320" y2="110" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+  <line x1="820" y1="0" x2="940" y2="110" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+
+  <!-- LEFT: SPONSOR BADGE & ICON -->
+  <g transform="translate(24, 18)">
+    <!-- Shield / Lightning Icon Box -->
+    <rect x="0" y="0" width="74" height="74" rx="10" fill="#ffffff" filter="url(#shadowFilter)" />
+    <!-- EVN Brand Logo Mark (Lightning & Letters) -->
+    <path d="M42 12 L22 42 L36 42 L32 62 L52 32 L38 32 Z" fill="#be1016" />
+    <path d="M40 16 L25 40 L35 40 L31 56 L47 34 L37 34 Z" fill="#ffb703" />
+  </g>
+
+  <!-- BRAND NAME & ORGANIZATIONAL DETAILS -->
+  <g transform="translate(112, 28)">
+    <text x="0" y="16" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#ffd166" letter-spacing="1">
+      TẬP ĐOÀN ĐIỆN LỰC VIỆT NAM • EVN
+    </text>
+    <text x="0" y="42" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="900" fill="#ffffff" letter-spacing="-0.3">
+      ĐẢM BẢO CUNG ỨNG ĐIỆN &amp; CHUYỂN DỊCH NĂNG LƯỢNG BỀN VỮNG
+    </text>
+    <text x="0" y="62" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#e0e8f0">
+      Đồng hành cùng Bộ Công Thương và Doanh nghiệp trên lộ trình tiến tới Net Zero 2050
+    </text>
+  </g>
+
+  <!-- CENTER-RIGHT KEY HIGHLIGHTS -->
+  <g transform="translate(790, 24)" class="hidden md:block">
+    <rect x="0" y="4" width="145" height="54" rx="6" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" />
+    <text x="72" y="24" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#ffd166" text-anchor="middle">
+      TỰ ĐỘNG HÓA LƯỚI
+    </text>
+    <text x="72" y="44" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle">
+      100% TBA 110kV
+    </text>
+  </g>
+
+  <!-- RIGHT: CALL TO ACTION BUTTON -->
+  <g transform="translate(960, 32)">
+    <rect x="0" y="0" width="168" height="46" rx="23" fill="url(#btnGrad)" filter="url(#shadowFilter)" />
+    <text x="76" y="28" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      TÌM HIỂU NGAY
+    </text>
+    <!-- Arrow -->
+    <path d="M136 23 L144 23 M141 19 L145 23 L141 27" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  </g>
+
+  <!-- Top "Quảng cáo" Tag in top right corner -->
+  <rect x="1100" y="0" width="60" height="16" fill="rgba(0,0,0,0.6)" />
+  <text x="1130" y="12" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">QUẢNG CÁO</text>
+</svg>

@@ -175,3 +175,392 @@ body {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* ========================================================================= */
+/* 1. SIDE GUTTERS BANNER ADS (2 BÊN NGOÀI VIỀN TRỐNG - THEO HỌP 02/10)     */
+/* ========================================================================= */
+.site-layout-with-gutters {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  max-width: 1540px;
+  margin: 0 auto;
+}
+
+.side-gutter-ad {
+  position: sticky;
+  top: 54px;
+  width: 120px;
+  flex-shrink: 0;
+  display: none;
+  z-index: 30;
+  padding: 8px 4px;
+}
+
+@media (min-width: 1240px) {
+  .side-gutter-ad {
+    display: block;
+    width: 120px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .side-gutter-ad {
+    display: block;
+    width: 140px;
+  }
+}
+
+.side-gutter-ad .ad-banner-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 4px;
+  padding: 4px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.side-gutter-ad .ad-banner-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.side-gutter-ad img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  display: block;
+}
+
+.site-main-content-wrapper {
+  width: 100%;
+  max-width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+@media (min-width: 1240px) {
+  .site-main-content-wrapper {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1440px) {
+  .site-main-content-wrapper {
+    max-width: 1240px;
+  }
+}
+
+/* ========================================================================= */
+/* 2. MULTI-LEVEL DROPDOWN NAVIGATION (SUBMENU CON ĐA CẤP)                   */
+/* ========================================================================= */
+.nav-item-dropdown {
+  position: relative;
+}
+
+.nav-item-dropdown:hover > .nav-dropdown-content {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  background-color: #FFFFFF;
+  color: #0F172A;
+  box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border-top: 3px solid #C4161C;
+  border-radius: 0 0 6px 6px;
+  z-index: 60;
+  padding: 6px 0;
+  text-align: left;
+}
+
+.nav-dropdown-content a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #334155;
+  border-bottom: 1px solid #F1F5F9;
+  transition: background 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
+  white-space: normal;
+  line-height: 1.35;
+}
+
+.nav-dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.nav-dropdown-content a:hover {
+  background-color: #FEF2F2;
+  color: #C4161C;
+  padding-left: 20px;
+}
+
+/* ========================================================================= */
+/* 3. YOUTUBE FRAME 16:9 WITHOUT BLACK BARS (TRIỆT TIÊU 2 VIỀN ĐEN)          */
+/* ========================================================================= */
+.video-frame-16-9 {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  background: #000000;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.video-frame-16-9 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-thumb-crop {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background-color: #071526;
+  border-radius: 4px;
+}
+
+.video-thumb-crop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.video-thumb-crop:hover img {
+  transform: scale(1.05);
+}
+
+/* ========================================================================= */
+/* 4. MOBILE DRAWER (OFF-CANVAS MENU TRƯỢT MƯỢT MÀ)                         */
+/* ========================================================================= */
+#mobile-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#mobile-drawer.open {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+#mobile-drawer .drawer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(2px);
+}
+
+#mobile-drawer .drawer-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 85%;
+  max-width: 340px;
+  background: #FFFFFF;
+  transform: translateX(-100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.25);
+}
+
+#mobile-drawer.open .drawer-content {
+  transform: translateX(0);
+}
+
+/* ========================================================================= */
+/* 5. PHOTO STORY / ALBUM ẢNH PHÓNG SỰ                                      */
+/* ========================================================================= */
+.photo-story-figure {
+  margin: 32px 0;
+  position: relative;
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.photo-story-figure img {
+  width: 100%;
+  height: auto;
+  max-height: 720px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-story-caption {
+  padding: 12px 18px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #475569;
+  border-top: 1px solid #E2E8F0;
+  background: #FFFFFF;
+}
+
+.photo-badge-counter {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(4px);
+}
+
+/* ========================================================================= */
+/* 6. ACTIVE NAV LINK HIGH CONTRAST (SỬA CHỮ TỐI MÀU TRÊN MENU ĐỎ)          */
+/* ========================================================================= */
+.nav-link-active,
+.cat-nav-link.active {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  color: #FFFFFF !important;
+  position: relative;
+  font-weight: 900 !important;
+}
+
+.nav-link-active::after,
+.cat-nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 6px;
+  right: 6px;
+  height: 3px;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+}
+
+/* ========================================================================= */
+/* 7. 16:9 THUMBNAIL ENFORCEMENT & STRICT EQUAL HEIGHT (KHÔNG BỊ ẢNH DỌC)   */
+/* ========================================================================= */
+.thumb-16-9 {
+  position: relative !important;
+  aspect-ratio: 16 / 9 !important;
+  overflow: hidden !important;
+  background-color: #0f172a;
+  border-radius: 6px;
+  align-self: flex-start !important;
+  flex-shrink: 0 !important;
+}
+
+.thumb-16-9 img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+/* Thumbnail riêng cho cột Tiêu điểm trong ngày (chống dãn dọc 100%) */
+.tieu-diem-thumb {
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+  height: 67.5px !important;
+  aspect-ratio: 16 / 9 !important;
+  overflow: hidden !important;
+  position: relative !important;
+  border-radius: 4px !important;
+  background-color: #0f172a !important;
+  flex-shrink: 0 !important;
+  align-self: flex-start !important;
+}
+
+.tieu-diem-thumb img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+/* Thumbnail các danh mục bên dưới: Đảm bảo 100% bằng nhau, cùng chuẩn 16:9 */
+.card-thumb-16-9 {
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  overflow: hidden !important;
+  position: relative !important;
+  background-color: #0f172a !important;
+  border-radius: 6px !important;
+  border: 1px solid #E2E8F0 !important;
+}
+
+.card-thumb-16-9 img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+/* Crop zoom for any YouTube 4:3 letterbox thumb */
+.crop-yt-thumb img {
+  transform: scale(1.34);
+  transform-origin: center center;
+}
+
+/* ========================================================================= */
+/* 8. IN-PAGE & SIDEBAR AD BANNERS (QUẢNG CÁO TRONG TRANG)                  */
+/* ========================================================================= */
+.in-feed-ad-banner {
+  margin: 36px 0;
+  padding: 10px 12px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+}
+
+.in-feed-ad-banner img {
+  width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.sidebar-ad-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.sidebar-ad-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
